@@ -110,12 +110,59 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Theme\css\bootstrap.css" />
+    <Content Include="Theme\css\chocolat.css" />
+    <Content Include="Theme\css\font-awesome.css" />
+    <Content Include="Theme\css\responsiveslides.css" />
+    <Content Include="Theme\css\style.css" />
+    <Content Include="Theme\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Theme\images\3.jpg" />
+    <Content Include="Theme\images\ab143.jpg" />
+    <Content Include="Theme\images\ab1432.jpg" />
+    <Content Include="Theme\images\ab1433.jpg" />
+    <Content Include="Theme\images\b11.jpg" />
+    <Content Include="Theme\images\b22.jpg" />
+    <Content Include="Theme\images\ban2.jpg" />
+    <Content Include="Theme\images\ban4.jpg" />
+    <Content Include="Theme\images\blog1.jpg" />
+    <Content Include="Theme\images\blog3.jpg" />
+    <Content Include="Theme\images\close.png" />
+    <Content Include="Theme\images\con1.jpg" />
+    <Content Include="Theme\images\g111.jpg" />
+    <Content Include="Theme\images\g222.jpg" />
+    <Content Include="Theme\images\g333.jpg" />
+    <Content Include="Theme\images\g4.jpg" />
+    <Content Include="Theme\images\g444.jpg" />
+    <Content Include="Theme\images\g555.jpg" />
+    <Content Include="Theme\images\g666.jpg" />
+    <Content Include="Theme\images\g777.jpg" />
+    <Content Include="Theme\images\left.png" />
+    <Content Include="Theme\images\right.png" />
+    <Content Include="Theme\images\team1.jpg" />
+    <Content Include="Theme\images\team2.jpg" />
+    <Content Include="Theme\images\team3.jpg" />
+    <Content Include="Theme\images\team4.jpg" />
+    <Content Include="Theme\images\up-arrow.png" />
+    <Content Include="Theme\js\bootstrap.js" />
+    <Content Include="Theme\js\easing.js" />
+    <Content Include="Theme\js\jquery-1.11.1.min.js" />
+    <Content Include="Theme\js\jquery.chocolat.js" />
+    <Content Include="Theme\js\jquery.textFx.js" />
+    <Content Include="Theme\js\jquery.transit.js" />
+    <Content Include="Theme\js\moment-timezone-with-data.js" />
+    <Content Include="Theme\js\moment.js" />
+    <Content Include="Theme\js\move-top.js" />
+    <Content Include="Theme\js\numscroller-1.0.js" />
+    <Content Include="Theme\js\particles.js" />
+    <Content Include="Theme\js\SmoothScroll.min.js" />
+    <Content Include="Theme\js\timer.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Student\Add.cshtml" />
     <Content Include="Views\Shared\Student\_StudentDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -126,6 +173,17 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Theme\fonts\fontawesome-webfont.eot" />
+    <Content Include="Theme\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Theme\fonts\fontawesome-webfont.woff" />
+    <Content Include="Theme\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Theme\fonts\FontAwesome.otf" />
+    <Content Include="Theme\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Theme\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Theme\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Theme\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -136,7 +194,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Contents\Image\" />
-    <Folder Include="Contents\Theme\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApplication_04.BLL\WebApplication_04.BLL.csproj">
