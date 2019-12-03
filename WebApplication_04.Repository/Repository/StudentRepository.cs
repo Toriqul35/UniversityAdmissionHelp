@@ -11,13 +11,23 @@ namespace WebApplication_04.Repository.Repository
     public class StudentRepository
     {
         ProjectDbContext _dbContext = new ProjectDbContext();
+        
 
         public bool Add(Student student)
         {
-            _dbContext.Students.Add(student);
+            
+            int i = _dbContext.Students.Where(c => c.Email == student.Email).Count();
+            {
+                if (i > 0)
+                {
+                    return false;
+                }
+               
+                _dbContext.Students.Add(student);
 
 
-            return _dbContext.SaveChanges() > 0;
+                return _dbContext.SaveChanges() > 0;
+            }
         }
         public List<Student>ViewStudent()
         {

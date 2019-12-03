@@ -41,6 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\AdmissionTests.cs" />
+    <Compile Include="Model\LiveChat.cs" />
+    <Compile Include="Model\MajorOfBusiness.cs" />
+    <Compile Include="Model\MajorOfHumanities.cs" />
+    <Compile Include="Model\MajorOfScience.cs" />
+    <Compile Include="Model\PostAdmission.cs" />
     <Compile Include="Model\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

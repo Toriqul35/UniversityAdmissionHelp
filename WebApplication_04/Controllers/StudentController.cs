@@ -13,6 +13,10 @@ namespace WebApplication_04.Controllers
 {
     public class StudentController : Controller
     {
+        public ActionResult Index()
+        {
+            return View();
+        }
         StudentManager _studentManager = new StudentManager();
 
         ProjectDbContext _dbContext = new ProjectDbContext();
@@ -54,21 +58,27 @@ namespace WebApplication_04.Controllers
 
                 if (_studentManager.Add(student))
                 {
-                    message = "Saved";
+                    message = "Successfully Registration ";
                 }
                 else
                 {
-                    message = "Not Saved";
+                    message = " Not Registration";
                 }
             }
             else
             {
-                message = "Create Failed";
+                message = "Registration  Failed";
             }
 
             ViewBag.Message = message;
             studentViewModel.Students = _studentManager.ViewStudent();
-            return View(studentViewModel);
+
+            return RedirectToAction("Index", "Admin");
+        }
+
+        public ActionResult Login()
+        {
+            return View();
         }
     }
 }
