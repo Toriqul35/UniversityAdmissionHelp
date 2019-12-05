@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\MajorOfBusinessManager.cs" />
+    <Compile Include="BLL\MajorOfSceienceManager.cs" />
     <Compile Include="BLL\StudentManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

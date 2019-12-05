@@ -1,0 +1,123 @@
+﻿@model WebApplication_04.Models.SceienceViewModel
+<link href="~/Contents/CSS/Student/Sceience.css" rel='stylesheet' type='text/css' />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="~/Contents/CSS/Student/Sceience.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width" />
+<title>Application</title>
+
+<div class="menu">
+    <form method="post">
+
+        <table >
+            <tr>
+                <td>@Html.LabelFor(c => c.TotalSSC)</td>
+                <td> @Html.EditorFor(model => model.TotalSSC, new { @id = "TotalSSC", @placeholder = "SSC Total Marks" })</td>
+                <td>@Html.ValidationMessageFor(c => c.TotalSSC)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.Bangla1st)</td>
+                <td> @Html.EditorFor(model => model.Bangla1st, new { @id = "Bangla1st", @placeholder = "Bangla 1st Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Bangla1st)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.Bangla2nd)</td>
+                <td> @Html.EditorFor(model => model.Bangla2nd, new { @id = "Bangla2nd", @placeholder = "Bangla 2nd Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Bangla2nd)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.Engish1st)</td>
+                <td> @Html.EditorFor(model => model.Engish1st, new { @id = "Engish1st", @placeholder = "English 1st Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Engish1st)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.English2nd)</td>
+                <td> @Html.EditorFor(model => model.English2nd, new { @id = "TotalSSC", @placeholder = "English 2nd Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.English2nd)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.Ict)</td>
+                <td> @Html.EditorFor(model => model.Ict, new { @id = "Ict", @placeholder = "Ict " })</td>
+                <td>@Html.ValidationMessageFor(c => c.Ict)</td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(c => c.Physics1st)</td>
+                <td> @Html.EditorFor(model => model.Physics1st, new { @id = "Physics1st", @placeholder = "Physics 1st Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Physics1st)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.Physics2nd)</td>
+                <td> @Html.EditorFor(model => model.Physics2nd, new { @id = "Physics2nd", @placeholder = "Physics 2nd Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Physics2nd)</td>
+            </tr>
+
+            <tr>
+                <td>@Html.LabelFor(c => c.Chemistry1st)</td>
+                <td> @Html.EditorFor(model => model.Chemistry1st, new { @id = "Chemistry1st", @placeholder = "Chemistry 1st Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Chemistry1st)</td>
+            <tr>
+                <td>@Html.LabelFor(c => c.Chemistry2nd)</td>
+                <td> @Html.EditorFor(model => model.Chemistry2nd, new { @id = "Chemistry2nd", @placeholder = "Chemistry 2nd Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Chemistry2nd)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.Baiology1st)</td>
+                <td> @Html.EditorFor(model => model.Baiology1st, new { @id = "Baiology1st", @placeholder = "Baiology 1st Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Baiology1st)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.Baiology2nd)</td>
+                <td> @Html.EditorFor(model => model.Baiology2nd, new { @id = "Baiology2nd", @placeholder = "Baiology 2nd Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Baiology2nd)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.HigherMath1st)</td>
+                <td> @Html.EditorFor(model => model.HigherMath1st, new { @id = "HigherMath1st", @placeholder = "HigherMath 1st Paper " })</td>
+                <td>@Html.ValidationMessageFor(c => c.HigherMath1st)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.HigherMath2nd)</td>
+                <td> @Html.EditorFor(model => model.HigherMath2nd, new { @id = "HigherMath2nd", @placeholder = "HigherMath 2nd Paper" })</td>
+                <td>@Html.ValidationMessageFor(c => c.HigherMath2nd)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.TotalHSC)</td>
+                <td> @Html.EditorFor(model => model.TotalHSC, new { @id = "TotalHSC" })</td>
+                <td>@Html.ValidationMessageFor(c => c.TotalHSC)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(c => c.Total_HSC_SSC)</td>
+                <td> @Html.EditorFor(model => model.Total_HSC_SSC, new { @id = "Total_HSC_SSC" })</td>
+                <td>@Html.ValidationMessageFor(c => c.Total_HSC_SSC)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input class='btn btn-info btn-xs' type="submit" value="Submit" /></td>
+
+                <td>
+                    @if (ViewBag.Message != null)
+                    {
+                        <h3>
+                            <b>
+                                @ViewBag.Message
+                            </b>
+                        </h3>
+                    }
+                </td>
+            </tr>
+        </table>
+        <input class='btn btn-info btn-xs' type="submit" value="Submit" />
+    </form>
+</div>
+<script src="~/Scripts/jquery-1.8.0.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+
+
+
+
+
+

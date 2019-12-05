@@ -100,6 +100,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contents\CSS\Student\Business.css" />
+    <Content Include="Contents\CSS\Student\Sceience.css" />
     <Content Include="Theme\Admin\css\basictable.css" />
     <Content Include="Theme\Admin\css\bootstrap.min.css" />
     <Content Include="Theme\Admin\css\font-awesome.css" />
@@ -177,6 +179,15 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Theme\ApplyTest\Business\css\font-awesome.css" />
+    <Content Include="Theme\ApplyTest\Business\css\jquery-ui.css" />
+    <Content Include="Theme\ApplyTest\Business\css\style.css" />
+    <Content Include="Theme\ApplyTest\Business\fonts\fontawesome-webfont.svg" />
+    <Content Include="Theme\ApplyTest\Business\images\bg.jpg" />
+    <Content Include="Theme\ApplyTest\Business\images\c-arrows.png" />
+    <Content Include="Theme\ApplyTest\Business\images\logo.png" />
+    <Content Include="Theme\ApplyTest\Business\js\jquery-2.1.4.min.js" />
+    <Content Include="Theme\ApplyTest\Business\js\jquery-ui.js" />
     <Content Include="Theme\css\bootstrap.css" />
     <Content Include="Theme\css\chocolat.css" />
     <Content Include="Theme\css\font-awesome.css" />
@@ -227,6 +238,8 @@
     <Content Include="Theme\js\particles.js" />
     <Content Include="Theme\js\SmoothScroll.min.js" />
     <Content Include="Theme\js\timer.js" />
+    <Content Include="Theme\Registration\css\style.css" />
+    <Content Include="Theme\Registration\images\ban4.jpg" />
     <Content Include="Theme\Student\css\bootstrap.min.css" />
     <Content Include="Theme\Student\css\font-awesome.css" />
     <Content Include="Theme\Student\css\font.css" />
@@ -281,7 +294,6 @@
     <Content Include="Theme\Student\js\scripts.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Student\Add.cshtml" />
-    <Content Include="Views\Shared\Student\_StudentDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -291,8 +303,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BusinessViewModel.cs" />
+    <Compile Include="Models\SceienceViewModel.cs" />
     <Compile Include="Models\StudentViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Crypto.cs" />
+    <Compile Include="Security\Email.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -320,6 +336,15 @@
     <Content Include="Theme\Student\fonts\FontAwesome.otf" />
     <Content Include="Theme\Student\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Theme\Student\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Views\Student\MailCompose.cshtml" />
+    <Content Include="Views\Shared\Student\_StudentHome.cshtml" />
+    <Content Include="Views\Student\MajorOfSceience.cshtml" />
+    <Content Include="Views\Student\MajorOfBusiness.cshtml" />
+    <Content Include="Theme\ApplyTest\Business\fonts\fontawesome-webfont.eot" />
+    <Content Include="Theme\ApplyTest\Business\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Theme\ApplyTest\Business\fonts\fontawesome-webfont.woff" />
+    <Content Include="Theme\ApplyTest\Business\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Theme\ApplyTest\Business\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

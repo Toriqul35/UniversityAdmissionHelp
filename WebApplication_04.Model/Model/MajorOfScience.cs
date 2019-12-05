@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace WebApplication_04.Model.Model
 {
     public class MajorOfScience

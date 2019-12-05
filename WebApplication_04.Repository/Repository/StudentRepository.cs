@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using WebApplication_04.Security;
 using WebApplication_04.DatabaseContext.DatabaseContext;
 using WebApplication_04.Model.Model;
 using System.Threading.Tasks;
@@ -33,7 +34,31 @@ namespace WebApplication_04.Repository.Repository
         {
             return _dbContext.Students.ToList();
         }
+        public int Login(Student student)
+        {
+            var users = _dbContext.Students.FirstOrDefault(c => c.Email == student.Email);
+            if (users != null)
+            {
+                if (string.Compare(Crypto.Hash(student.Password), users.Password) == 0 && users.IsEmailVerified == true)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                return -1;
+            }
+        }
 
+        public List<Student> GetAll()
+        {
+
+            return _dbContext.Students.ToList();
+        }
 
     }
 }

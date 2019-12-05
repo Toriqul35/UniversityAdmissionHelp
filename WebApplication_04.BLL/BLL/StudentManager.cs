@@ -21,5 +21,14 @@ namespace WebApplication_04.BLL.BLL
         {
             return _studentRepository.ViewStudent();
         }
+
+        public int Login(Student student)
+        {
+            return _studentRepository.Login(student);
+        }
+        public List<Student> GetAll()
+        {
+            return _studentRepository.GetAll();
+        }
     }
 }

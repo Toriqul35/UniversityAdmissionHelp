@@ -11,7 +11,11 @@ namespace WebApplication_04.Model.Model
         public int Id { get; set; }
         public int AdmissionTestId { get; set; }
         public AdmissionTests AdmissionTests { get; set; }
+        public DateTime? Date { get; set; }
+
         public int TotalSSC { get; set; }
+
+      
         public int Bangla1st { get; set; }
         public int Bangla2nd { get; set; }
         public int Engish1st { get; set; }
@@ -23,8 +27,8 @@ namespace WebApplication_04.Model.Model
         public int Finaance2nd { get; set; }
         public int Managment1st { get; set; }
         public int Managment2nd { get; set; }
-        public int Economics1st { get; set; }
-        public int Economics2nd { get; set; }
+        public int Marketing1st { get; set; }
+        public int Marketing2nd { get; set; }
 
         public int TotalHSC { get; set; }
         public int Total_HSC_SSC { get; set; }

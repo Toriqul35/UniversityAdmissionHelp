@@ -24,6 +24,14 @@ namespace WebApplication_04
                 cfg.CreateMap<StudentViewModel, Student>();
                 cfg.CreateMap<Student, StudentViewModel>();
 
+                cfg.CreateMap<SceienceViewModel, MajorOfScience>();
+                cfg.CreateMap<MajorOfScience, SceienceViewModel>();
+
+                cfg.CreateMap<BusinessViewModel, MajorOfBusiness>();
+                cfg.CreateMap<MajorOfBusiness, BusinessViewModel>();
+
+
+
             });
         }
     }

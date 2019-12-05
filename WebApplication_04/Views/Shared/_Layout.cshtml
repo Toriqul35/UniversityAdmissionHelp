@@ -83,7 +83,7 @@
                     <nav>
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="index.html" class="hvr-underline-from-center">Home</a></li>
-                            <li><a href="~/Admin/Index.cshtml" class="scroll hvr-underline-from-center">About</a></li>
+                            <li><a href="~/Student/Add">About</a></li>
                             <li><a href="#services" class="scroll hvr-underline-from-center">Services</a></li>
                             <li><a href="#gallery" class="scroll hvr-underline-from-center">Gallery</a></li>
                             <li><a href="#university" class="scroll hvr-underline-from-center">University</a></li>
@@ -108,9 +108,9 @@
                         <div class="signin-form profile">
                             <h3 class="agileinfo_sign">Sign In</h3>
                             <div class="login-form">
-                                <form action="" method="post">
-                                    <input type="text" name="email" placeholder="E-mail" required="">
-                                    <input type="password" name="password" placeholder="Password" required="">
+                                <form action="~/Student/Login" method="post">
+                                    <input type="text" name="Email" placeholder="E-mail" required="">
+                                    <input type="password" name="Password" placeholder="Password" required="">
                                     <div class="tp">
                                         <input type="submit" value="Sign In">
                                     </div>
@@ -130,8 +130,8 @@
             </div>
         </div>
         <!-- //Modal1 -->
-      
         <!-- Modal2 -->
+       
         <div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -140,16 +140,17 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                         <div class="signin-form profile">
-                            <a href="~/Student/Add"> <input type="submit" value="Sign Up"></a>
+                            <a href=""> <input type="submit" value="Sign Up"></a>
                             <div class="login-form">
                                 <form action="@Url.Action("Add","Student")" method="post">
-                                    <input type="text" name="Name" placeholder="Username" required="">
-                                    <input type="email" id="ema" name="Email" placeholder="Email" required="">
-                                    <input type="text" name="Contact" placeholder="Cell Number" required="">
-                                    <input type="password" id="password" name="password" placeholder="Password" required="">
-                                    <input type="password" id="confirm_password" name="password" placeholder="Confirm Password" required="">
+                                  
+                                            <input type="text" name="Name" placeholder="Username" required="">
+                                            <input type="email" id="ema" name="Email" placeholder="Email" required="">
+                                            <input type="text" name="Contact" placeholder="Cell Number" required="">
+                                            <input type="password" id="password" name="Password" placeholder="Password" required="">
+                                            <input type="password" id="confirm_password" name="password" placeholder="Confirm Password" required="">
 
-                                    <input type="submit"  value="Sign Up">
+                                    <input type="submit" value="Sign Up">
                                 </form>
                             </div>
                             <p><a href="#"> By clicking register, I agree to your terms</a></p>
@@ -432,7 +433,7 @@
                             <li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                             <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                         </ul>
-                        <img src="~/Theme/images/Emran.jpg"  alt=" " class="img-responsive">
+                        <img src="~/Theme/images/Emran.jpg" alt=" " class="img-responsive">
                     </div>
                     <div class="w3-team-head">
                         <h4>Emran Hossain</h4>
@@ -709,6 +710,7 @@
         $(function () {
             $('.gallery a').Chocolat();
         });
+
     </script>
     <!-- //js -->
     <script type="text/javascript" src="~/Theme/js/numscroller-1.0.js"></script>
@@ -750,6 +752,37 @@
         $(document).ready(function () {
 
             $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+
+    </script>
+    <script>
+         $(document).ready(function() {
+            $("#Email").focusout(function() {
+
+                var email = $("#Email").val();
+
+                var jsonRequesData = { email: email };
+
+                $.ajax({
+                    url: "/student/IsStudentExist",
+                    type: "POST",
+                    data: jsonRequesData,
+                    success: function(data) {
+                        //alert("Ajax Requiest Success");
+                        $("#ema").text("");
+                        if (data===true) {
+                            $("#ema").text("Email is no Exists");
+                            $("#ema").focus();
+                        }
+
+                    },
+                    error: function() {
+                        alert("Email Is exist");
+                    }
+                });
+
+
+            });
         });
     </script>
     <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
