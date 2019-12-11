@@ -100,8 +100,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contents\CSS\Admin\Js1.js" />
+    <Content Include="Contents\CSS\Admin\UploadFile.css" />
+    <Content Include="Contents\CSS\Student\ApplyAdmissionTest.css" />
     <Content Include="Contents\CSS\Student\Business.css" />
+    <Content Include="Contents\CSS\Student\button.css" />
+    <Content Include="Contents\CSS\Student\Contact.css" />
     <Content Include="Contents\CSS\Student\Sceience.css" />
+    <Content Include="Contents\Student\Profile.css" />
     <Content Include="Theme\Admin\css\basictable.css" />
     <Content Include="Theme\Admin\css\bootstrap.min.css" />
     <Content Include="Theme\Admin\css\font-awesome.css" />
@@ -188,6 +194,9 @@
     <Content Include="Theme\ApplyTest\Business\images\logo.png" />
     <Content Include="Theme\ApplyTest\Business\js\jquery-2.1.4.min.js" />
     <Content Include="Theme\ApplyTest\Business\js\jquery-ui.js" />
+    <Content Include="Theme\images\all.jpg" />
+    <Content Include="Theme\images\bue1.jpg" />
+    <Content Include="Theme\images\buet.jpg" />
     <Content Include="Theme\css\bootstrap.css" />
     <Content Include="Theme\css\chocolat.css" />
     <Content Include="Theme\css\font-awesome.css" />
@@ -205,8 +214,17 @@
     <Content Include="Theme\images\ban4.jpg" />
     <Content Include="Theme\images\blog1.jpg" />
     <Content Include="Theme\images\blog3.jpg" />
+    <Content Include="Theme\images\Buet5.jpg" />
     <Content Include="Theme\images\close.png" />
     <Content Include="Theme\images\con1.jpg" />
+    <Content Include="Theme\images\cu2.jpg" />
+    <Content Include="Theme\images\cu3.jpg" />
+    <Content Include="Theme\images\cu5.jpg" />
+    <Content Include="Theme\images\du.jpg" />
+    <Content Include="Theme\images\du1.jpg" />
+    <Content Include="Theme\images\du2.jpg" />
+    <Content Include="Theme\images\Du5.jpg" />
+    <Content Include="Theme\images\du7.jpg" />
     <Content Include="Theme\images\Emran.jpg" />
     <Content Include="Theme\images\Faisal.jpg" />
     <Content Include="Theme\images\g111.jpg" />
@@ -217,9 +235,19 @@
     <Content Include="Theme\images\g555.jpg" />
     <Content Include="Theme\images\g666.jpg" />
     <Content Include="Theme\images\g777.jpg" />
+    <Content Include="Theme\images\jnu.jpg" />
+    <Content Include="Theme\images\Jnu2.jpg" />
+    <Content Include="Theme\images\jnu5.jpg" />
+    <Content Include="Theme\images\Ju.jpg" />
+    <Content Include="Theme\images\ju1.jpg" />
+    <Content Include="Theme\images\ju2.jpg" />
+    <Content Include="Theme\images\ju5.jpg" />
     <Content Include="Theme\images\left.png" />
     <Content Include="Theme\images\Profile.jpg" />
     <Content Include="Theme\images\right.png" />
+    <Content Include="Theme\images\RU1.jpg" />
+    <Content Include="Theme\images\ru3.jpg" />
+    <Content Include="Theme\images\ru5.jpg" />
     <Content Include="Theme\images\team1.jpg" />
     <Content Include="Theme\images\team2.jpg" />
     <Content Include="Theme\images\team3.jpg" />
@@ -293,7 +321,6 @@
     <Content Include="Theme\Student\js\script.js" />
     <Content Include="Theme\Student\js\scripts.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Student\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -304,6 +331,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BusinessViewModel.cs" />
+    <Compile Include="Models\ContactViewModel.cs" />
+    <Compile Include="Models\HumantiesViewModel.cs" />
+    <Compile Include="Models\PostViewModel.cs" />
     <Compile Include="Models\SceienceViewModel.cs" />
     <Compile Include="Models\StudentViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -345,6 +375,20 @@
     <Content Include="Theme\ApplyTest\Business\fonts\fontawesome-webfont.woff" />
     <Content Include="Theme\ApplyTest\Business\fonts\fontawesome-webfont.woff2" />
     <Content Include="Theme\ApplyTest\Business\fonts\FontAwesome.otf" />
+    <Content Include="Views\Student\MajorOfHuminties.cshtml" />
+    <Content Include="Views\Student\ViewProfile.cshtml" />
+    <Content Include="Views\Student\Map.cshtml" />
+    <Content Include="Views\Student\UpdateProfile.cshtml" />
+    <Content Include="Views\Student\ApplyAdmission.cshtml" />
+    <Content Include="Views\Admin\_LayoutAdminView.cshtml" />
+    <Content Include="Views\Admin\Celender.cshtml" />
+    <Content Include="Views\Admin\Map.cshtml" />
+    <Content Include="Views\Admin\Galary.cshtml" />
+    <Content Include="Theme\images\Jnu5.webp" />
+    <Content Include="Views\Student\Contact.cshtml" />
+    <Content Include="Views\Admin\Register.cshtml" />
+    <Content Include="Views\Admin\UploadSucess.cshtml" />
+    <Content Include="Views\Admin\PostAdmission.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -353,10 +397,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\File\" />
     <Folder Include="Contents\Admin\" />
     <Folder Include="Contents\Image\" />
-    <Folder Include="Contents\Student\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApplication_04.BLL\WebApplication_04.BLL.csproj">

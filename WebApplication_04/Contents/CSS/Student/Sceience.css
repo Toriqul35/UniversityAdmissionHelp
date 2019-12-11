@@ -10,16 +10,18 @@
 td, th {
     border: 1px solid #dddddd;
     text-align:left;
-    padding: 6px;
+    padding: 9px;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
 }
 
-.menu {
-    width:100%;
-    background-color:aqua;
+.men {
+   
+   margin-top:-200px;
+   position:center;
+   margin-left:400px;
     
 }
 

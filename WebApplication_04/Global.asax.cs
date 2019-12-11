@@ -30,7 +30,14 @@ namespace WebApplication_04
                 cfg.CreateMap<BusinessViewModel, MajorOfBusiness>();
                 cfg.CreateMap<MajorOfBusiness, BusinessViewModel>();
 
+                cfg.CreateMap<HumantiesViewModel, MajorOfHumanities>();
+                cfg.CreateMap<MajorOfHumanities, HumantiesViewModel>();
 
+                cfg.CreateMap<ContactViewModel, Contact>();
+                cfg.CreateMap<Contact, ContactViewModel>();
+
+                cfg.CreateMap<PostViewModel, PostAdmission>();
+                cfg.CreateMap<PostAdmission, PostViewModel>();
 
             });
         }

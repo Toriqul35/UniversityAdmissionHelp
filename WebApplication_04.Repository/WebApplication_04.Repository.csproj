@@ -49,9 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AdminRepository.cs" />
+    <Compile Include="Repository\ContactRepository.cs" />
     <Compile Include="Repository\Crypto.cs" />
     <Compile Include="Repository\Email.cs" />
     <Compile Include="Repository\MajorOfBusinessRepository.cs" />
+    <Compile Include="Repository\MajorOfHumanitiesRepository.cs" />
     <Compile Include="Repository\MajorOfSceienceRepository.cs" />
     <Compile Include="Repository\StudentRepository.cs" />
   </ItemGroup>

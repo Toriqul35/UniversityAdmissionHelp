@@ -11,9 +11,9 @@ namespace WebApplication_04.Security
     {
         public static void SendVarificationEmail(string Email, string link)
         {
-            var fromEmail = new MailAddress("toriqul.pdap@gmail.com", "WebApplication_04");
+            var fromEmail = new MailAddress("infobd.web@gmail.com", "WebApplication_04");
             var ToEmail = new MailAddress(Email);
-            var FormEmailPass = "amarbangla1";
+            var FormEmailPass = "We112233";
             string Subject = "Your account successfully created";
 
             string body = "<br><br><br><b>Welcome!!</b>  <br>" +

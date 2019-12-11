@@ -1,16 +1,22 @@
 ﻿@model WebApplication_04.Models.SceienceViewModel
+
+
 <link href="~/Contents/CSS/Student/Sceience.css" rel='stylesheet' type='text/css' />
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="~/Contents/CSS/Student/Sceience.css" rel="stylesheet" />
 <meta name="viewport" content="width=device-width" />
-<title>Application</title>
 
-<div class="menu">
+<title>major of sceience</title>
+
+@{
+    Html.RenderPartial("~/Views/Shared/Student/_StudentHome.cshtml");
+}
     <form method="post">
-
-        <table >
+        <h1 style="margin-left:400px;"> Faculty Of Science </h1>
+        <table>
+            
             <tr>
                 <td>@Html.LabelFor(c => c.TotalSSC)</td>
                 <td> @Html.EditorFor(model => model.TotalSSC, new { @id = "TotalSSC", @placeholder = "SSC Total Marks" })</td>
@@ -93,9 +99,9 @@
                 <td>@Html.ValidationMessageFor(c => c.Total_HSC_SSC)</td>
             </tr>
             <tr>
+                <td>Action</td>
+                <td><input class='btn btn-info btn-xs' type="submit" value="Submit"/></td>
                 <td></td>
-                <td><input class='btn btn-info btn-xs' type="submit" value="Submit" /></td>
-
                 <td>
                     @if (ViewBag.Message != null)
                     {
@@ -110,7 +116,6 @@
         </table>
         <input class='btn btn-info btn-xs' type="submit" value="Submit" />
     </form>
-</div>
 <script src="~/Scripts/jquery-1.8.0.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

@@ -21,8 +21,11 @@ namespace WebApplication_04.BLL.BLL
         {
             return _studentRepository.ViewStudent();
         }
-
-        public int Login(Student student)
+        public bool Update(Student student)
+        {
+            return _studentRepository.Update(student);
+        }
+        public int Login( Student student)
         {
             return _studentRepository.Login(student);
         }
@@ -30,5 +33,11 @@ namespace WebApplication_04.BLL.BLL
         {
             return _studentRepository.GetAll();
         }
+        public Student GetById(string Email)
+        {
+            return _studentRepository.GetById(Email);
+        }
+
+       
     }
 }

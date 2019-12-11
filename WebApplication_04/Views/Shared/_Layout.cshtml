@@ -43,6 +43,7 @@
     </script>
 </head>
 <body>
+   
     <div class="w3-banner-edu">
         <div class="agileits_top_menu">
 
@@ -50,7 +51,7 @@
                 <ul>
 
                     <li><i class="fa fa-phone" aria-hidden="true"></i> +01707518358</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@university.com">info@university.com</a></li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:infobd.web@gmail.com">infobd.web@gmail.com</a></li>
                 </ul>
             </div>
             <div class="w3l_header_right">
@@ -76,14 +77,14 @@
                 </div>
                 <ul class="agile_forms">
                     <li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a> </li>
-                    <li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up</a> </li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Apply</a> </li>
                 </ul>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav>
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html" class="hvr-underline-from-center">Home</a></li>
-                            <li><a href="~/Student/Add">About</a></li>
+                            <li class="active"><a href="~/Home/Index" class="hvr-underline-from-center">Home</a></li>
+                            <li><a href="#about" class="scroll hvr-underline-from-center">About</a></li>
                             <li><a href="#services" class="scroll hvr-underline-from-center">Services</a></li>
                             <li><a href="#gallery" class="scroll hvr-underline-from-center">Gallery</a></li>
                             <li><a href="#university" class="scroll hvr-underline-from-center">University</a></li>
@@ -108,9 +109,9 @@
                         <div class="signin-form profile">
                             <h3 class="agileinfo_sign">Sign In</h3>
                             <div class="login-form">
-                                <form action="~/Student/Login" method="post">
+                                <form action="@Url.Action("Login","Admin")" method="post">
                                     <input type="text" name="Email" placeholder="E-mail" required="">
-                                    <input type="password" name="Password" placeholder="Password" required="">
+                                    <input type="password" name="Pin" placeholder="Password" required="">
                                     <div class="tp">
                                         <input type="submit" value="Sign In">
                                     </div>
@@ -123,7 +124,7 @@
                                     <li><a href="#"><i class="fa fa-rss"></i></a></li>
                                 </ul>
                             </div>
-                            <p><a href="#" data-toggle="modal" data-target="#myModal3"> Don't have an account?</a></p>
+                            <p><a href="#" data-toggle="modal99" data-target="#myModal44"> Don't have an account?</a></p>
                         </div>
                     </div>
                 </div>
@@ -131,7 +132,6 @@
         </div>
         <!-- //Modal1 -->
         <!-- Modal2 -->
-       
         <div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
@@ -140,20 +140,17 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
 
                         <div class="signin-form profile">
-                            <a href=""> <input type="submit" value="Sign Up"></a>
+                            <a href="~/Student/ApplyAdmission"> <input type="submit" value="Apply Test"></a>
                             <div class="login-form">
-                                <form action="@Url.Action("Add","Student")" method="post">
-                                  
-                                            <input type="text" name="Name" placeholder="Username" required="">
-                                            <input type="email" id="ema" name="Email" placeholder="Email" required="">
-                                            <input type="text" name="Contact" placeholder="Cell Number" required="">
-                                            <input type="password" id="password" name="Password" placeholder="Password" required="">
-                                            <input type="password" id="confirm_password" name="password" placeholder="Confirm Password" required="">
+                                <form action="@Url.Action("Apply","Student")" method="post">
 
-                                    <input type="submit" value="Sign Up">
+                                    @*<input type="text" name="UserName" placeholder=" User Name" required="">
+                                    <input type="email" id="ema" name="Email" placeholder="Email" required="">
+                                    <input type="text" name="Contact" placeholder="Cell Number" required="">
+                                    <input type="password" id="password" name="Password" placeholder="Password" required="">
+                                         <input type="submit" value="Sign Up">*@
                                 </form>
                             </div>
-                            <p><a href="#"> By clicking register, I agree to your terms</a></p>
                         </div>
                     </div>
                 </div>
@@ -172,622 +169,781 @@
 
         </div>
     </div>
-    <!-- About -->
-    <div id="about" class="about">
-        <div class="container">
-            <div class="w3-about-head">
-                <h3>ABOUT US</h3>
-            </div>
-            <div class="w3-agileitsline">
-                <h3>
-                    Welcome to <span>" University Addmission Service "</span> We provided to suggestion where is the best place for required student about admission test in Bangladesh.
+        <!-- About -->
+        <div id="about" class="about">
+            <div class="container">
+                <div class="w3-about-head">
+                    <h3>ABOUT US</h3>
+                </div>
+                <div class="w3-agileitsline">
+                    <h3>
+                        Welcome to <span>" University Addmission Service "</span> We provided to suggestion where is the best place for required student about admission test in Bangladesh.
 
-                </h3>
-                <p>We are tracking university admission test and given there</p>
-            </div>
-            <!-- banner-bottom -->
-            <div class="banner-bottom">
-                <div class="col-md-4 agileits_banner_bottom_left">
-                    <div class="agileinfo_banner_bottom_pos">
-                        <div class="w3_agileits_banner_bottom_pos_grid">
-                            <div class=" wthree_banner_bottom_grid_left">
-                                <div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </h3>
+                    <p>We are tracking university admission test and given there</p>
+                </div>
+                <!-- banner-bottom -->
+                <div class="banner-bottom">
+                    <div class="col-md-4 agileits_banner_bottom_left">
+                        <div class="agileinfo_banner_bottom_pos">
+                            <div class="w3_agileits_banner_bottom_pos_grid">
+                                <div class=" wthree_banner_bottom_grid_left">
+                                    <div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
+                                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    </div>
                                 </div>
+                                <div class=" wthree_banner_bottom_grid_right">
+                                    <h4>Friendly campus</h4>
+                                    <p>The goal of the program is to help institutions develop plans to coordinate administrators, faculty, and student organizations</p>
+                                </div>
+                                <div class="clearfix"> </div>
                             </div>
-                            <div class=" wthree_banner_bottom_grid_right">
-                                <h4>Friendly campus</h4>
-                                <p>The goal of the program is to help institutions develop plans to coordinate administrators, faculty, and student organizations</p>
-                            </div>
-                            <div class="clearfix"> </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 agileits_banner_bottom_left1">
-                    <div class="agileinfo_banner_bottom_pos">
-                        <div class="w3_agileits_banner_bottom_pos_grid">
-                            <div class=" wthree_banner_bottom_grid_left">
-                                <div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-                                    <i class="fa fa-book" aria-hidden="true"></i>
+                    <div class="col-md-4 agileits_banner_bottom_left1">
+                        <div class="agileinfo_banner_bottom_pos">
+                            <div class="w3_agileits_banner_bottom_pos_grid">
+                                <div class=" wthree_banner_bottom_grid_left">
+                                    <div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
+                                        <i class="fa fa-book" aria-hidden="true"></i>
+                                    </div>
                                 </div>
+                                <div class=" wthree_banner_bottom_grid_right">
+                                    <h4>24/7 lab</h4>
+                                    <p>Our 24-hour services allow  to receive your message up and feadback off your required, free of charge, any time during the day..</p>
+                                </div>
+                                <div class="clearfix"> </div>
                             </div>
-                            <div class=" wthree_banner_bottom_grid_right">
-                                <h4>24/7 lab</h4>
-                                <p>Our 24-hour services allow  to receive your message up and feadback off your required, free of charge, any time during the day..</p>
-                            </div>
-                            <div class="clearfix"> </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 agileits_banner_bottom_left2">
-                    <div class="agileinfo_banner_bottom_pos">
-                        <div class="w3_agileits_banner_bottom_pos_grid">
-                            <div class=" wthree_banner_bottom_grid_left">
-                                <div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-                                    <i class="fa fa-yelp" aria-hidden="true"></i>
+                    <div class="col-md-4 agileits_banner_bottom_left2">
+                        <div class="agileinfo_banner_bottom_pos">
+                            <div class="w3_agileits_banner_bottom_pos_grid">
+                                <div class=" wthree_banner_bottom_grid_left">
+                                    <div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
+                                        <i class="fa fa-yelp" aria-hidden="true"></i>
+                                    </div>
                                 </div>
+                                <div class=" wthree_banner_bottom_grid_right">
+                                    <h4>Bus fecility</h4>
+                                    <p> We provide bus service admission test time for which student location of away</p>
+                                </div>
+                                <div class="clearfix"> </div>
                             </div>
-                            <div class=" wthree_banner_bottom_grid_right">
-                                <h4>Bus fecility</h4>
-                                <p> We provide bus service admission test time for which student location of away</p>
-                            </div>
-                            <div class="clearfix"> </div>
                         </div>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-            <!-- //banner-bottom -->
-        </div>
-    </div>
-    <!-- //About -->
-    <!-- //services -->
-    <div class="w3-services" id="services">
-
-        <div class="w3-services-head">
-            <h3>our sevices</h3>
-        </div>
-        <div class="w3-services-grids">
-            <div class="col-md-6 w3-services-left-grid">
-                <img src="~/Theme/images/ban4.jpg" alt="img">
-            </div>
-            <div class="col-md-6 w3-services-right-grid">
-                <div class="col-md-6 w3-services-right1-grid">
-                    <h3>Time of Admission</h3>
-                    <ul>
-                        <li><span class="col-md-2">01</span><p class="col-md-10">Provided to suggestion where is the best place.</p></li>
-                        <li><span class="col-md-2">02</span><p class="col-md-10">Online place student can apply admission over all public university.</p></li>
-                        <li><span class="col-md-2">03</span><p class="col-md-10">Building communication between the student and informer teachers.</p></li>
-                        <li><span class="col-md-2">04</span><p class="col-md-10">We provide bus service in admission test schedule</p></li>
-                        <li><span class="col-md-2">05</span><p class="col-md-10">Tracking university admission test and given there.</p></li>
-                    </ul>
-                </div>
-                <div class="col-md-6 w3-services-right1-grid">
-                    <h3>Time of over all</h3>
-                    <ul>
-                        <li><span class="col-md-2">01</span><p class="col-md-10">Admission test attend can be who have minimum required </p></li>
-                        <li><span class="col-md-2">02</span><p class="col-md-10">We Notice that admission time Schedule</p></li>
-                        <li><span class="col-md-2">03</span><p class="col-md-10">You see here public universities,admission information</p></li>
-                        <li><span class="col-md-2">04</span><p class="col-md-10">We are going to provide overview all of public university admission information.</p></li>
-                        <li><span class="col-md-2">05</span><p class="col-md-10">You can see top 10 private university admission information.</p></li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- //services -->
-    <!-- gallery -->
-    <div class="gallery" id="gallery">
-        <div class="container">
-            <div class="gallery-w3-head">
-                <h4>Our Gallery</h4>
-            </div>
-            <div id="jzBox" class="jzBox">
-                <div id="jzBoxNextBig"></div>
-                <div id="jzBoxPrevBig"></div>
-                <img src="#" id="jzBoxTargetImg" alt="">
-                <div id="jzBoxBottom">
-                    <div id="jzBoxTitle"></div>
-                    <div id="jzBoxCounter"></div>
-                    <span id="jzBoxMoreItems">
-                        <i class="glyphicon glyphicon-chevron-left" id="jzBoxPrev"></i> &nbsp;
-                        <i class="glyphicon glyphicon-chevron-right" id="jzBoxNext"></i> &nbsp;
-                    </span>
-                    <i class="glyphicon glyphicon-remove-circle" id="jzBoxClose"></i>
-                </div>
-            </div>
-            <div class="gallery-grids-row">
-                <div class="col-md-4 gallery-grid">
-                    <div class="wpf-demo-4">
-                        <a href="~/Theme/images/g111.jpg" class="jzBoxLink item-hover" title="Maecenas sodales tortor ac ligula ultrices dictum et quis urna.">
-                            <img src="~/Theme/images/g111.jpg" class="img-responsive" alt=" " />
-                            <div class="view-caption">
-                                <p>Our Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="wpf-demo-4">
-                        <a href="~/Theme/images/g222.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
-                            <img src="~/Theme/images/g222.jpg" alt=" " class="img-responsive" />
-                            <div class="view-caption">
-                                <p>Our Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="wpf-demo-4">
-                        <a href="~/Theme/images/g333.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
-                            <img src="~/Theme/images/g333.jpg" alt=" " class="img-responsive" />
-                            <div class="view-caption">
-                                <p>Our Gallery</p>
-                            </div>
-                        </a>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
-                <div class="col-md-4 gallery-grid">
-                    <div class="wpf-demo-4">
-                        <a href="~/Theme/images/g4.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
-                            <img src="~/Theme/images/g4.jpg" alt=" " class="img-responsive" />
-                            <div class="view-caption">
-                                <p>Our Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="wpf-demo-4">
-                        <a href="~/Theme/images/g444.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
-                            <img src="~/Theme/images/g444.jpg" alt=" " class="img-responsive" />
-                            <div class="view-caption">
-                                <p>Our Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="col-md-4 gallery-grid">
-                    <div class="wpf-demo-4">
-                        <a href="~/Theme/images/g555.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
-                            <img src="~/Theme/images/g555.jpg" alt=" " class="img-responsive" />
-                            <div class="view-caption">
-                                <p>Our Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="wpf-demo-4">
-                        <a href="images/g666.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
-                            <img src="images/g666.jpg" alt=" " class="img-responsive" />
-                            <div class="view-caption">
-                                <p>Our Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="wpf-demo-4">
-                        <a href="~/Theme/images/g777.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
-                            <img src="~/Theme/images/g777.jpg" alt=" " class="img-responsive" />
-                            <div class="view-caption">
-                                <p>Our Gallery</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="clearfix"> </div>
+                <!-- //banner-bottom -->
             </div>
         </div>
-    </div>
-    <!-- //gallery -->
-    <!-- our team -->
-    <div class="team" id="team">
-        <div class="container">
-            <div class="w3ls-heading">
-                <h3>Our team</h3>
+        <!-- //About -->
+        <!-- //services -->
+        <div class="w3-services" id="services">
+
+            <div class="w3-services-head">
+                <h3>our sevices</h3>
             </div>
-            <div class="w3-team-grids">
-                <div class="col-md-3 chef agile_team_grid">
-                    <div class="agileits_w3layouts_team_grid">
-                        <ul class="agileinfo_social_icons">
-                            <li><a href="https://www.facebook.com/Sheikh.Toriqul.Islam" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="https://twitter.com/Sheikh_Toriqul_" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            <div class="w3-services-grids">
+                <div class="col-md-6 w3-services-left-grid">
+                    <img src="~/Theme/images/all.jpg" alt="img">
+                </div>
+                <div class="col-md-6 w3-services-right-grid">
+                    <div class="col-md-6 w3-services-right1-grid">
+                        <h3>Time of Admission</h3>
+                        <ul>
+                            <li><span class="col-md-2">01</span><p class="col-md-10">Provided to suggestion where is the best place.</p></li>
+                            <li><span class="col-md-2">02</span><p class="col-md-10">Online place student can apply admission over all public university.</p></li>
+                            <li><span class="col-md-2">03</span><p class="col-md-10">Building communication between the student and informer teachers.</p></li>
+                            <li><span class="col-md-2">04</span><p class="col-md-10">We provide bus service in admission test schedule</p></li>
+                            <li><span class="col-md-2">05</span><p class="col-md-10">Tracking university admission test and given there.</p></li>
                         </ul>
-                        <img src="~/Theme/images/Profile.jpg" alt=" " class="img-responsive">
                     </div>
-                    <div class="w3-team-head">
-                        <h4>Md Toriqul Isalm </h4>
-                        <p>Developer</p>
-                    </div>
-                </div>
-                <div class="col-md-3 chef agile_team_grid">
-                    <div class="agileits_w3layouts_team_grid">
-                        <ul class="agileinfo_social_icons">
-                            <li><a href="https://www.facebook.com/afjal.hossain.359126" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <div class="col-md-6 w3-services-right1-grid">
+                        <h3>Time of over all</h3>
+                        <ul>
+                            <li><span class="col-md-2">01</span><p class="col-md-10">Admission test attend can be who have minimum required </p></li>
+                            <li><span class="col-md-2">02</span><p class="col-md-10">We Notice that admission time Schedule</p></li>
+                            <li><span class="col-md-2">03</span><p class="col-md-10">You see here public universities,admission information</p></li>
+                            <li><span class="col-md-2">04</span><p class="col-md-10">We are going to provide overview all of public university admission information.</p></li>
+                            <li><span class="col-md-2">05</span><p class="col-md-10">You can see top 10 private university admission information.</p></li>
                         </ul>
-                        <img src="~/Theme/images/Afjal.jpg" alt=" " class="img-responsive">
-                    </div>
-                    <div class="w3-team-head">
-                        <h4>Afjal Hossain </h4>
-                        <p>Chairman</p>
-                    </div>
-                </div>
-                <div class="col-md-3 chef agile_team_grid">
-                    <div class="agileits_w3layouts_team_grid">
-                        <ul class="agileinfo_social_icons">
-                            <li><a href="https://www.facebook.com/faisal.kabir.75436" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        </ul>
-                        <img src="~/Theme/images/Faisal.jpg" alt=" " class="img-responsive">
-                    </div>
-                    <div class="w3-team-head">
-                        <h4>Faisal kabir</h4>
-                        <p>Manager</p>
-                    </div>
-                </div>
-                <div class="col-md-3 chef agile_team_grid">
-                    <div class="agileits_w3layouts_team_grid">
-                        <ul class="agileinfo_social_icons">
-                            <li><a href="https://www.facebook.com/emranhossan.himel" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        </ul>
-                        <img src="~/Theme/images/Emran.jpg" alt=" " class="img-responsive">
-                    </div>
-                    <div class="w3-team-head">
-                        <h4>Emran Hossain</h4>
-                        <p>Director</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-
-
-        </div>
-    </div>
-    <!-- //our team -->
-    <!-- news -->
-    <section class="news" id="news">
-        <div class="container">
-            <div class="heading">
-                <h3>Our Blog</h3>
-            </div>
-            <div class="news-grids">
-                <div class="col-md-4 news-grid1">
-                    <img src="~/Theme/images/b11.jpg" alt="" />
-                    <div class="absolute">
-                        <div class="absolute-left">
-                            <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  2/3/2017</p>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="absolute-right">
-                            <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">50</span></p>
-
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <h3>Vesti id ipsum sit amet</h3>
-                    <p>Phasellus fringilla faucibus ipsum, id pharetra massa consequat ac. Nullam at tempus urna. Praesent non dapibus.</p>
-                    <div class="more">
-                        <a href="#" data-toggle="modal" data-target="#myModal">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-4 news-grid1">
-                    <img src="~/Theme/images/b22.jpg" alt="" />
-                    <div class="absolute">
-                        <div class="absolute-left">
-                            <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  1/3/2017</p>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="absolute-right">
-                            <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">70</span></p>
-
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <h3>Quisque nisi elit portti</h3>
-                    <p>Nullam sit amet ligula non ante dapibus facilisis. Donec nec sollicitudin lectus. Nam iaculis risus scelerisque lacus. </p>
-                    <div class="more">
-                        <a href="#" data-toggle="modal" data-target="#myModal">read more</a>
-                    </div>
-                </div>
-                <div class="col-md-4 news-grid1">
-                    <img src="~/Theme/images/blog1.jpg" alt="" />
-                    <div class="absolute">
-                        <div class="absolute-left">
-                            <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  28/2/2017</p>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="absolute-right">
-                            <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">64</span></p>
-
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <h3> Etiam iaculis metus vitae</h3>
-                    <p>Ut pulvinar erat in eros sodales tristique. Pellentesque risus dui, tincidunt id tincidunt eget, venenatis id lorem. tincidunt </p>
-                    <div class="more">
-                        <a href="#" data-toggle="modal" data-target="#myModal">read more</a>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </section>
-    <!-- news -->
-    <!-- modal -->
-    <div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span2" aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">University Admission </h4>
-                </div>
-                <div class="modal-body">
-                    <div class="agileits-w3layouts-info">
-                        <img src="~/Theme/images/3.jpg" alt="" />
-                        <p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper.  Cras tempor massa luctus, varius lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //modal -->
-    <!--count-->
-    <div class="count-agileits">
-
-        <div class="count-grids">
-            <div class="count-bgcolor-w3ls">
-                <div class="col-md-4 count-grid">
-                    <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
-                    <div class="count hvr-bounce-to-bottom">
-                        <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1052' data-delay='.5' data-increment="100">1052</div>
-                        <span></span>
-                        <h5>Placed students</h5>
-                    </div>
-                </div>
-                <div class="col-md-4 count-grid">
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                    <div class="count hvr-bounce-to-bottom">
-                        <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='372' data-delay='.5' data-increment="100">372</div>
-                        <span></span>
-                        <h5>several departments </h5>
-                    </div>
-                </div>
-                <div class="col-md-4 count-grid">
-                    <i class="fa fa-user-plus" aria-hidden="true"></i>
-                    <div class="count hvr-bounce-to-bottom">
-                        <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='105209' data-delay='.5' data-increment="100">105209</div>
-                        <span></span>
-                        <h5>completed students</h5>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-    <!--count-->
-    <!-- coureses online -->
-    <div class="w3-edu-main content " id="contact">
-        <div class="w3-edu-head">
-            <h3>contact us</h3>
-        </div>
-        <div class="w3-online-edu-grids">
-            <div class="col-md-6 w3-online-course-grid">
-                <div class="Online-course-left-head">
-                    <h3>GET 100 OF ONLINE COURSES </h3>
-                    <h4>Register now</h4>
-                </div>
-
-                <div class="agileits-timer">
-                    <div class="clock">
-                        <div class="column days">
-                            <div class="timer" id="days"></div>
-                            <div class="text">DAYS</div>
-                        </div>
-                        <div class="timer days"></div>
-                        <div class="column">
-                            <div class="timer" id="hours"></div>
-                            <div class="text">HOURS</div>
-                        </div>
-                        <div class="timer"></div>
-                        <div class="column">
-                            <div class="timer" id="minutes"></div>
-                            <div class="text">MINUTES</div>
-                        </div>
-                        <div class="timer"></div>
-                        <div class="column">
-                            <div class="timer" id="seconds"></div>
-                            <div class="text">SECONDS</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-6 w3-edu-online-form w3_mail_grids">
-                <h3>Admission form</h3>
-                <form action="#" method="post">
-                    <div class="w3_agile_mail_grid">
-                        <input type="text" placeholder="Your Name" required="">
-                        <input type="email" placeholder="Your Email" required="">
-                        <input type="tel" placeholder="Your Phone Number" required="">
-                        <select id="category1" required="">
-                            <option value="">Course type*</option>
-                            <option value="">Diploma</option>
-                            <option value="">Full time</option>
-                            <option value="">Part time</option>
-                            <option value="">Higher degree</option>
-                            <option value="">Graduate</option>
-                            <option value="">Pg</option>
-                            <option value="">Degree</option>
-                        </select>
-
-                        <textarea name="Message" placeholder="Your Message" required=""></textarea>
-                        <input type="submit" value="Send">
-                    </div>
-                </form>
-
-            </div>
-            <div class="clearfix"></div>
-
-        </div>
-    </div>
-    @{
-        RenderBody();
-    }
-
-    <!-- map  -->
-    <div class="w3-agile-map1">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.904989695193!2d90.37600671420849!3d23.75076726120724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8ad9a69f36f%3A0xffd63d9e3af04553!2sDhanmondi%2032%20Bus%20Stop!5e0!3m2!1sen!2sbd!4v1574102535197!5m2!1sen!2sbd"></iframe>
-
-    </div>
-    <!-- map -->
-    <!-- coureses online -->
-    <!-- footer-top -->
-    <div class="footer-top">
-        <div class="container">
-            <div class="w3-edu-footer-grids foot-left1">
-                <div class="col-md-4 foot-left">
-                    <h3>About Us</h3>
-
-                    <p>All Public University admission test notice, seat plan and admission test result 2019-20 will be published on our website.</p>
-                </div>
-                <div class="col-md-4 foot-left">
-                    <h3>Get In Touch</h3>
-                    <p>Congratulations on behalf of university admission service.</p>
-
-                    <div class="contact-btm">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <p>Dhanmondhi 32,Dhaka 1209.</p>
-
-
-                    </div>
-                    <div class="contact-btm">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <p>+01707518358</p>
-                        <div class="contact-btm">
-                        </div>
-                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
-                        <p><a href="mailto:info.toriqul@email.com">info@university.com</a></p>
                     </div>
                     <div class="clearfix"></div>
-
-                </div>
-                <div class="col-md-4 foot-left">
-                    <h3>Subscribe</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum has </p>
-                    <form action="#" method="post">
-                        <input type="email" Name="Enter Your Email" placeholder="Enter Your Email" required="">
-                        <input type="submit" value="Subscribe">
-                    </form>
                 </div>
                 <div class="clearfix"></div>
             </div>
+        </div>
+        <!-- //services -->
+        <!-- gallery -->
+        <div class="gallery" id="gallery">
+            <div class="container">
+                <div class="gallery-w3-head">
+                    <h4>Our Gallery</h4>
+                </div>
+                <div id="jzBox" class="jzBox">
+                    <div id="jzBoxNextBig"></div>
+                    <div id="jzBoxPrevBig"></div>
+                    <img src="#" id="jzBoxTargetImg" alt="">
+                    <div id="jzBoxBottom">
+                        <div id="jzBoxTitle"></div>
+                        <div id="jzBoxCounter"></div>
+                        <span id="jzBoxMoreItems">
+                            <i class="glyphicon glyphicon-chevron-left" id="jzBoxPrev"></i> &nbsp;
+                            <i class="glyphicon glyphicon-chevron-right" id="jzBoxNext"></i> &nbsp;
+                        </span>
+                        <i class="glyphicon glyphicon-remove-circle" id="jzBoxClose"></i>
+                    </div>
+                </div>
+                <div class="gallery-grids-row">
+                    <div class="col-md-4 gallery-grid">
+                        <div class="wpf-demo-4">
+                            <a href="~/Theme/images/Buet5.jpg" class="jzBoxLink item-hover" title="Maecenas sodales tortor ac ligula ultrices dictum et quis urna.">
+                                <img src="~/Theme/images/Buet5.jpg" class="img-responsive" alt=" " />
+                                <div class="view-caption">
+                                    <p>BUET</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="wpf-demo-4">
+                            <a href="~/Theme/images/jnu5.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+                                <img src="~/Theme/images/jnu5.jpg" alt=" " class="img-responsive" />
+                                <div class="view-caption">
+                                    <p>JnU</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-4 gallery-grid">
+                        <div class="wpf-demo-4">
+                            <a href="~/Theme/images/ju5.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+                                <img src="~/Theme/images/ju5.jpg" alt=" " class="img-responsive" />
+                                <div class="view-caption">
+                                    <p>JU</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="wpf-demo-4">
+                            <a href="~/Theme/images/cu5.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+                                <img src="~/Theme/images/cu5.jpg" alt=" " class="img-responsive" />
+                                <div class="view-caption">
+                                    <p>CU</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-4 gallery-grid">
+                        <div class="wpf-demo-4">
+                            <a href="~/Theme/images/du7.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+                                <img src="~/Theme/images/du7.jpg" alt=" " class="img-responsive" />
+                                <div class="view-caption">
+                                    <p>DU</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="wpf-demo-4">
+                            <a href="~/Theme/images/ru5.jpg" class="jzBoxLink item-hover" title="Etiam pulvinar metus neque eget porttitor massa.">
+                                <img src="~/Theme/images/ru5.jpg" alt=" " class="img-responsive" />
+                                <div class="view-caption">
+                                    <p>RU</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- //gallery -->
+        <!-- our team -->
+        <div class="team" id="team">
+            <div class="container">
+                <div class="w3ls-heading">
+                    <h3>Our team</h3>
+                </div>
+                <div class="w3-team-grids">
+                    <div class="col-md-3 chef agile_team_grid">
+                        <div class="agileits_w3layouts_team_grid">
+                            <ul class="agileinfo_social_icons">
+                                <li><a href="https://www.facebook.com/Sheikh.Toriqul.Islam" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/Sheikh_Toriqul_" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <img src="~/Theme/images/Profile.jpg" alt=" " class="img-responsive">
+                        </div>
+                        <div class="w3-team-head">
+                            <h4>Md Toriqul Isalm </h4>
+                            <p>Developer</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 chef agile_team_grid">
+                        <div class="agileits_w3layouts_team_grid">
+                            <ul class="agileinfo_social_icons">
+                                <li><a href="https://www.facebook.com/afjal.hossain.359126" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <img src="~/Theme/images/Afjal.jpg" alt=" " class="img-responsive">
+                        </div>
+                        <div class="w3-team-head">
+                            <h4>Afjal Hossain </h4>
+                            <p>Chairman</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 chef agile_team_grid">
+                        <div class="agileits_w3layouts_team_grid">
+                            <ul class="agileinfo_social_icons">
+                                <li><a href="https://www.facebook.com/faisal.kabir.75436" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <img src="~/Theme/images/Faisal.jpg" alt=" " class="img-responsive">
+                        </div>
+                        <div class="w3-team-head">
+                            <h4>Faisal kabir</h4>
+                            <p>Manager</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 chef agile_team_grid">
+                        <div class="agileits_w3layouts_team_grid">
+                            <ul class="agileinfo_social_icons">
+                                <li><a href="https://www.facebook.com/emranhossan.himel" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                            </ul>
+                            <img src="~/Theme/images/Emran.jpg" alt=" " class="img-responsive">
+                        </div>
+                        <div class="w3-team-head">
+                            <h4>Emran Hossain</h4>
+                            <p>Director</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- //our team -->
+        <!-- news -->
+        <section class="news" id="university">
+            <div class="container">
+                <div class="heading">
+                    <h3>Univesity Of Bangladesh</h3>
+                </div>
+                <div class="news-grids">
+                    <div class="col-md-4 news-grid1">
+                        <img src="~/Theme/images/bue1.jpg" alt="" />
+                        <div class="absolute">
+                            <div class="absolute-left">
+                                <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  14/12/2019</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="absolute-right">
+                                <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">50</span></p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <h3>Bangladesh University of Engineering and Technology</h3>
+                        <p>Every year, around 1055 students get accepted to their undergraduate programs to study engineering, architecture, and urban planning.</p>
+                        <div class="more">
+                            <a href="#" data-toggle="modal" data-target="#myModal">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 news-grid1">
+                        <img src="~/Theme/images/du1.jpg" alt="" />
+                        <div class="absolute">
+                            <div class="absolute-left">
+                                <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  2/3/2017</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="absolute-right">
+                                <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">50</span></p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <h3>University Of Dhaka</h3>
+                        <p>On the first day of July 1921 the University of Dhaka opened its doors to students with Sir P.J. Hartog as the first Vice-Chancellor of the University. The University was set up in a picturesque part of the city known as Ramna on 600 acres of land.</p>
+                        <div class="more">
+                            <a href="#" data-toggle="modal" data-target="#myModal1">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 news-grid1">
+                        <img src="~/Theme/images/jnu.jpg" alt="" />
+                        <div class="absolute">
+                            <div class="absolute-left">
+                                <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  1/3/2017</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="absolute-right">
+                                <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">70</span></p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <h3>Jagannath University</h3>
+                        <p>Jagannath University (JnU) is one of the leading public universities in the country which came into being in 2005 after the passage of a bill named 'Jagannath University Act-2005' in the national parliament. </p>
+                        <div class="more">
+                            <a href="#" data-toggle="modal" data-target="#myMo">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 news-grid1" style="margin-top:100px;">
+                        <img src="~/Theme/images/ju1.jpg" alt="" />
+                        <div class="absolute">
+                            <div class="absolute-left">
+                                <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  28/10/2019</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="absolute-right">
+                                <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">64</span></p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <h3> Jahangirnagar University</h3>
+                        <p>
+                            As Jahangirnagar University (JU) is one of my preferred places for a quick getaway, the campus become vibrant with tourist in weekends. Some Krishnachura in bloom will welcome you right beside the main gate.
+                            You have to make the plan to set the journey according to the season. It would better to start journey at 6:30 am in winter and after 4:00 Pm in summer when the sun becoming tired.
+                        </p>
+                        <div class="more">
+                            <a href="#" data-toggle="modal" data-target="#myMod">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 news-grid1" style="margin-top:-480px;">
+                        <img src="~/Theme/images/RU1.jpg" alt="" />
+                        <div class="absolute">
+                            <div class="absolute-left">
+                                <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  28/10/2019</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="absolute-right">
+                                <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">64</span></p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <h3>University of Rajshahi</h3>
+                        <p>
+                            It was established in 1953, the second university to be established in what was then East Pakistan. The university is ranked third on the Bangladesh University Ranking 2017.
+
+                        </p>
+                        <div class="more">
+                            <a href="#" data-toggle="modal" data-target="#raj">read more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 news-grid1" style="margin-top:-480px; margin-left:400px;">
+                        <img src="~/Theme/images/cu2.jpg" alt="" />
+                        <div class="absolute">
+                            <div class="absolute-left">
+                                <p class="p1"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  28/10/2019</p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="absolute-right">
+                                <p class="left"><i class="fa fa-thumbs-up" aria-hidden="true"></i> <span class="span1">64</span></p>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <h3> University of Chittagong</h3>
+                        <p>
+                            This university has the largest campus among Bangladeshi universities. The academic activities of the university formally began on 18 November 1966. It has about 24,000 students and more than 1000 faculty members
+                        </p>
+                        <div class="more">
+                            <a href="#" data-toggle="modal" data-target="#cu">read more</a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </section>
+        <!-- news -->
+        <!-- modal -->
+        <div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span2" aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">University of  BUET </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="agileits-w3layouts-info">
+                            <img src="~/Theme/images/buet.jpg" alt="" />
+                            <p>
+                                Every year, around 1055 students get accepted to their undergraduate programs to study engineering, architecture, and urban planning.
+                                There are 626 teacher teching in BUET.Al the moment,out og the 446 teacher there 264 teacher  who hold PhD degree.
+                                About 7992 students are pursuing undergraduate and postgraduate studies in engineering, architecture, planning and science in this institution.
+                                <a href="http://ugadmission.buet.ac.bd/Notice_2019.html">On going admission</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal about-modal fade" id="myModal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span2" aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">University of  Dhaka </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="agileits-w3layouts-info">
+                            <img src="~/Theme/images/du2.jpg" alt="" />
+                            <p>
+                                Presently the University enrolls more than 5,800 students, on merit basis, in the first year Honours Program in different Departments of the Faculties and the Institutes. Besides conducting teaching courses in
+                                the 4- year Bachelor and 1-year Masters Programmes, the University also trains up a large number of researchers in different disciplines. More than 1262 Ph.D. and 1217 M.Phil. researchers have obtained their degrees from this University.
+                                The open-minded character of the University of Dhaka embodying the features of beauty and historical origins can be seen as one enters the campus.
+                                <a href="https://admission.eis.du.ac.bd/">On going admission</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal about-modal fade" id="myMo" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span2" aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Jagannath University </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="agileits-w3layouts-info">
+                            <img src="~/Theme/images/Jnu2.jpg" alt="" />
+                            <p>
+                                At present, the JnU has 31 departments under six faculties, namely Science, Arts, Business Studies, Life and Earth Sciences, Social Science and Law. More than five hundred teachers are engaged in imparting quality education to around 23,000 students in the university.
+                                'Education, Faith and Discipline' is the motto of the JnU. The mission of the university is to make the institution a centre of excellence for creating productive and responsible citizens of Bangladesh.
+                                The institution has a history of more than 150 years. It is located on 7.50 acres of land at Chittaranjan Avenue 9-10, the southern part of Dhaka city near the river Buriganga.
+                                <a href="http://admissionjnu.info/">On going admission</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal about-modal fade" id="myMod" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span2" aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Jahangirnagar University</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="agileits-w3layouts-info">
+                            <img src="~/Theme/images/ju2.jpg" alt="" />
+                            <p>
+                                Jahangirnagar University accustomed as a residential accessible university in 1970 has now 34 departments and Six Faculties along with Two institutes, with added than fifteen thousand students, and about Five hundred academics adherent to teaching and research. The sprawling arresting campus is anchored 30 kilometres from the basic Dhaka, able-bodied affiliated with a civic highway. The aboriginal assembly of Independent Bangladesh accepted the university its Charter in 1973 beneath which the university is getting operated.
+                                It operated as a project until 1973, when the 'Jahangirnagar Muslim University Act' was amended as the 'Jahangirnagar University Act'.
+                                In 2014, the university had 16,781 students, 755 teachers, and 1,430 other employees.It holds 3rd position in public University ranking several times.
+                                <a href="https://ju-admission.org/">On going admission</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal about-modal fade" id="raj" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span2" aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">University of Rajshahi</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="agileits-w3layouts-info">
+                            <img src="~/Theme/images/ru3.jpg" alt="" />
+                            <p>
+                                The university's 59 departments are organised into ten faculties. Rajshahi University is in a 305-hectare (753-acre) campus.
+                                With 25,000 students and close to 1000 academic staff, it is one of the largest universities in Bangladesh.
+                                In addition to hosting programs in engineering, arts, law, sciences, agriculture, social sciences, business studies and medical sciences, the university houses institutes of higher studies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal about-modal fade" id="cu" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="span2" aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">University of Chittagong(CU)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="agileits-w3layouts-info">
+                            <img src="~/Theme/images/cu3.jpg" alt="" />
+                            <p>
+                                Students of the University regularly participate in various creative activities, cultural competition, sports, debate competition, bncc and Rover Scouts program beside the academic activities. In 2010, Chittagong University had nine residential halls for the students, one hostel and residential quarters for teachers and staffs. It had 18,781 students, 648 teachers and 1947 supporting staffs and officers.
+                                Scouts program beside the academic activities. In 2010, Chittagong University had nine residential halls for the students,
+                                one hostel and residential quarters for teachers and staffs.
+                                It had 18,781 students, 648 teachers and 1947 supporting staffs and officers.
+                                The first convocation of Chittagong University was held in 1994. Earlier in 1981, a special convocation was held to award an honorary DSc degree to Nobel Lauriat physicist and world famous scientist Abdus Salam.
+                                <a href="http://cu.ac.bd/content/index.php?menumapno=43">On going admission</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //modal -->
+        <!--count-->
+        <div class="count-agileits">
+
+            <div class="count-grids">
+                <div class="count-bgcolor-w3ls">
+                    <div class="col-md-4 count-grid">
+                        <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                        <div class="count hvr-bounce-to-bottom">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='1052' data-delay='.5' data-increment="100">1052</div>
+                            <span></span>
+                            <h5>Placed students</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 count-grid">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        <div class="count hvr-bounce-to-bottom">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='372' data-delay='.5' data-increment="100">372</div>
+                            <span></span>
+                            <h5>several departments </h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 count-grid">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <div class="count hvr-bounce-to-bottom">
+                            <div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='105209' data-delay='.5' data-increment="100">105209</div>
+                            <span></span>
+                            <h5>completed students</h5>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!--count-->
+        <!-- coureses online -->
+        <div class="w3-edu-main content " id="contact">
+            <div class="w3-edu-head">
+                <h3>contact us</h3>
+            </div>
+            <div class="w3-online-edu-grids">
+                <div class="col-md-6 w3-online-course-grid">
+                    <div class="Online-course-left-head">
+                        <h3>GET 100 OF ONLINE COURSES </h3>
+                        <h4>Register now</h4>
+                    </div>
+
+                    <div class="agileits-timer">
+                        <div class="clock">
+                            <div class="column days">
+                                <div class="timer" id="days"></div>
+                                <div class="text">DAYS</div>
+                            </div>
+                            <div class="timer days"></div>
+                            <div class="column">
+                                <div class="timer" id="hours"></div>
+                                <div class="text">HOURS</div>
+                            </div>
+                            <div class="timer"></div>
+                            <div class="column">
+                                <div class="timer" id="minutes"></div>
+                                <div class="text">MINUTES</div>
+                            </div>
+                            <div class="timer"></div>
+                            <div class="column">
+                                <div class="timer" id="seconds"></div>
+                                <div class="text">SECONDS</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 w3-edu-online-form w3_mail_grids">
+                    <h3>Contact Us</h3>
+                    <form action="" method="post">
+                        <div class="w3_agile_mail_grid">
+                            <input type="text" name="UserName" placeholder="Your Name" required="">
+                            <input type="email" name="Email" placeholder="Your Email" required="">
+                            <input type="tel"  name="PhoneNumber" placeholder="Your Phone Number" required="">
+                            <select id="category1" name="Typeofmajor" >
+                                <option value="">Faculty Of Sceience</option>
+                                <option value="">Faculty Of Business</option>
+                                <option value="">Faculty of Humanities</option>
+                            </select>
+
+                            <textarea name="Massage" placeholder="Your Message" required=""></textarea>
+                            <input type="submit" value="Send">
+
+                        </div>
+                    </form>
+
+                </div>
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+        @{
+            RenderBody();
+        }
+
+        <!-- map  -->
+        <div class="w3-agile-map1">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.904989695193!2d90.37600671420849!3d23.75076726120724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8ad9a69f36f%3A0xffd63d9e3af04553!2sDhanmondi%2032%20Bus%20Stop!5e0!3m2!1sen!2sbd!4v1574102535197!5m2!1sen!2sbd"></iframe>
 
         </div>
-    </div>
-    <!-- /footer-top -->
-    <!-- footer -->
-    <div class="copy-right">
-        <p>&copy; 2019. All rights reserved | University Admission Help</p>
-    </div>
+        <!-- map -->
+        <!-- coureses online -->
+        <!-- footer-top -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="w3-edu-footer-grids foot-left1">
+                    <div class="col-md-4 foot-left">
+                        <h3>About Us</h3>
 
-    <!-- //footer -->
-    <!--  countdown-js -->
-    <script type="text/javascript" src="~/Theme/js/moment.js"></script>
-    <script type="text/javascript" src="~/Theme/js/moment-timezone-with-data.js"></script>
-    <script type="text/javascript" src="~/Theme/js/timer.js"></script>
-    <!-- //countdown-js -->
-    <!--light-box-files -->
-    <script src="~/Theme/js/jquery.chocolat.js"></script>
-    <link rel="stylesheet" href="~/Theme/css/chocolat.css" type="text/css" media="screen">
-    <!--//light-box-files -->
-    <script type="text/javascript">
-        $(function () {
-            $('.gallery a').Chocolat();
-        });
+                        <p>All Public University admission test notice, seat plan and admission test result 2019-20 will be published on our website.</p>
+                    </div>
+                    <div class="col-md-4 foot-left">
+                        <h3>Get In Touch</h3>
+                        <p>Congratulations on behalf of university admission service.</p>
 
-    </script>
-    <!-- //js -->
-    <script type="text/javascript" src="~/Theme/js/numscroller-1.0.js"></script>
-    <script src="~/Theme/js/particles.js"></script>
+                        <div class="contact-btm">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>Dhanmondhi 32,Dhaka 1209.</p>
 
-    <!-- text-effect -->
-    <script type="text/javascript" src="~/Theme/js/jquery.transit.js"></script>
-    <script type="text/javascript" src="~/Theme/js/jquery.textFx.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.test').textFx({
-                type: 'fadeIn',
-                iChar: 100,
-                iAnim: 1000
+
+                        </div>
+                        <div class="contact-btm">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <p>+01707518358</p>
+                            <div class="contact-btm">
+                            </div>
+                            <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                            <p><a href="mailto:infobd.web@email.com">infobd.web@email.com</a></p>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                    <div class="col-md-4 foot-left">
+                        <h3>Subscribe</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and Lorem Ipsum has </p>
+                        <form action="#" method="post">
+                            <input type="email" Name="Enter Your Email" placeholder="Enter Your Email" required="">
+                            <input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /footer-top -->
+        <!-- footer -->
+        <div class="copy-right">
+            <p>&copy; 2019. All rights reserved | University Admission Help</p>
+        </div>
+
+        <!-- //footer -->
+        <!--  countdown-js -->
+        <script type="text/javascript" src="~/Theme/js/moment.js"></script>
+        <script type="text/javascript" src="~/Theme/js/moment-timezone-with-data.js"></script>
+        <script type="text/javascript" src="~/Theme/js/timer.js"></script>
+        <!-- //countdown-js -->
+        <!--light-box-files -->
+        <script src="~/Theme/js/jquery.chocolat.js"></script>
+        <link rel="stylesheet" href="~/Theme/css/chocolat.css" type="text/css" media="screen">
+        <!--//light-box-files -->
+        <script type="text/javascript">
+            $(function () {
+                $('.gallery a').Chocolat();
             });
-        });
-    </script>
-    <!-- //text-effect -->
-    <script src="~/Theme/js/SmoothScroll.min.js"></script>
-    <script type="text/javascript">
-        /* init Jarallax */
-        $('.jarallax').jarallax({
-            speed: 0.5,
-            imgWidth: 1366,
-            imgHeight: 768
-        })
-    </script>
-    <script type="text/javascript">
-        jQuery(document).ready(function ($) {
-            $(".scroll").click(function (event) {
-                event.preventDefault();
-                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
-            });
-        });
-    </script>
 
-    <!-- smooth scrolling -->
-    <script type="text/javascript">
-        $(document).ready(function () {
+        </script>
+        <!-- //js -->
+        <script type="text/javascript" src="~/Theme/js/numscroller-1.0.js"></script>
+        <script src="~/Theme/js/particles.js"></script>
 
-            $().UItoTop({ easingType: 'easeOutQuart' });
-        });
-
-    </script>
-    <script>
-         $(document).ready(function() {
-            $("#Email").focusout(function() {
-
-                var email = $("#Email").val();
-
-                var jsonRequesData = { email: email };
-
-                $.ajax({
-                    url: "/student/IsStudentExist",
-                    type: "POST",
-                    data: jsonRequesData,
-                    success: function(data) {
-                        //alert("Ajax Requiest Success");
-                        $("#ema").text("");
-                        if (data===true) {
-                            $("#ema").text("Email is no Exists");
-                            $("#ema").focus();
-                        }
-
-                    },
-                    error: function() {
-                        alert("Email Is exist");
-                    }
+        <!-- text-effect -->
+        <script type="text/javascript" src="~/Theme/js/jquery.transit.js"></script>
+        <script type="text/javascript" src="~/Theme/js/jquery.textFx.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.test').textFx({
+                    type: 'fadeIn',
+                    iChar: 100,
+                    iAnim: 1000
                 });
-
-
             });
-        });
-    </script>
-    <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-    <!-- //smooth scrolling -->
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        </script>
+        <!-- //text-effect -->
+        <script src="~/Theme/js/SmoothScroll.min.js"></script>
+        <script type="text/javascript">
+            /* init Jarallax */
+            $('.jarallax').jarallax({
+                speed: 0.5,
+                imgWidth: 1366,
+                imgHeight: 768
+            })
+        </script>
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                $(".scroll").click(function (event) {
+                    event.preventDefault();
+                    $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+                });
+            });
+        </script>
+
+        <!-- smooth scrolling -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $().UItoTop({ easingType: 'easeOutQuart' });
+            });
+
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#Email").focusout(function () {
+
+                    var email = $("#Email").val();
+
+                    var jsonRequesData = { email: email };
+
+                    $.ajax({
+                        url: "/student/IsStudentExist",
+                        type: "POST",
+                        data: jsonRequesData,
+                        success: function (data) {
+                            //alert("Ajax Requiest Success");
+                            $("#ema").text("");
+                            if (data === true) {
+                                $("#ema").text("Email is no Exists");
+                                $("#ema").focus();
+                            }
+
+                        },
+                        error: function () {
+                            alert("Email Is exist");
+                        }
+                    });
+
+
+                });
+            });
+        </script>
+        <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+        <!-- //smooth scrolling -->
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 </body>
 </html>

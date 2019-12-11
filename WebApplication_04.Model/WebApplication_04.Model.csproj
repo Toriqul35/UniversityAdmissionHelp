@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,7 +44,9 @@
   <ItemGroup>
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\AdmissionTests.cs" />
+    <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\LiveChat.cs" />
+    <Compile Include="Model\Login.cs" />
     <Compile Include="Model\MajorOfBusiness.cs" />
     <Compile Include="Model\MajorOfHumanities.cs" />
     <Compile Include="Model\MajorOfScience.cs" />

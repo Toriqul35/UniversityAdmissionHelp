@@ -15,53 +15,64 @@ namespace WebApplication_04.Models
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Total SSC Marks")]
-       
+        [Range(720, 1199)]
+
         public int? TotalSSC { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Bangla 1st Paper")]
-        [Range(60,99)]
+        [Range(60,99) ]
         public int? Bangla1st { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Bangla 2nd Paper")]
+        [Range(60, 99)]
         public int? Bangla2nd { get; set; }
-
+       
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "English 1st Paper")]
+        [Range(60, 99)]
         public int? Engish1st { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "English 2nd Paper")]
+        [Range(60, 99)]
         public int? English2nd { get; set; }
 
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "ICT")]
+        [Range(60, 99)]
         public int? Ict { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Physics 1st Paper")]
+        [Range(60, 99)]
         public int? Physics1st { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Physics 2nd Paper")]
+        [Range(60, 99)]
         public int? Physics2nd { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Chemistry 1st Paper")]
+        [Range(60, 99)]
         public int? Chemistry1st { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Chemistry 2nd Paper")]
+        [Range(60, 99)]
         public int? Chemistry2nd { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Baiology 1st Paper")]
+        [Range(60, 99)]
         public int? Baiology1st { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "Baiology 2nd Paper")]
+        [Range(60, 99)]
         public int? Baiology2nd { get; set; }
 
         [Required(ErrorMessage = "Can not be Empty")]
@@ -70,10 +81,12 @@ namespace WebApplication_04.Models
 
         [Required(ErrorMessage = "Can not be Empty")]
         [Display(Name = "HigherMath 2nd Paper")]
+        [Range(60, 99)]
         public int? HigherMath2nd { get; set; }
 
 
         [Display(Name = "TotalHSC Number")]
+        [Range(720, 1299)]
         public int? TotalHSC { get; set; }
 
         [Display(Name = "Total Number")]

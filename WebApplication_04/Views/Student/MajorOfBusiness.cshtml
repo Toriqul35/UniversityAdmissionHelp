@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 
 <head>
-    <title>Admission</title>
+    <title>major of business</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Education Admission Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -36,18 +36,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
     <!-- main -->
     <div class="main-agileits">
-        <h1>
-            Major Of Business for Admission
-            <img src="~/Theme/ApplyTest/Business/images/logo.png" alt="">
-        </h1>
-        <div class="register-form" style="width:900px">
+        @{
+            Html.RenderPartial("~/Views/Shared/Student/_StudentHome.cshtml");
+        }
+
+        <div class="register-form" style="width:990px; margin-left:300px; margin-top:-120px;">
+            <h1>
+                Faculty Of Business Studies
+            </h1>
             <form action="@Url.Action("MajorOfBusiness","Student")" method="post">
 
-                <div style="width:400px">
+                <div style="width:420px">
                     <div class="fields-grid">
-                        <label>
+                        <h4>
                             <b style="color:red">Subject of HSC Business Studies</b>
-                        </label>
+                        </h4>
                         <div class="styled-input">
                             <label class="form-label">
                                 Total SSC Number
@@ -109,16 +112,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="clear"> </div>
                     </div>
                 </div>
-                <div style="width:400px; margin-left:500px; margin-top:-590px;">
+                <div style="width:430px; margin-left:490px; margin-top:-630px;">
                     <div class="fields-grid">
 
-                        <label>
+                        <h4>
                             <b style="color:red">Subject of HSC Business Studies</b>
-                        </label>
-                        <div class="styled-input">
-                            <input id="datepicker" placeholder="Date of Today" name="Date" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
-                                   required="">
-                        </div>
+                        </h4>
+                        @*<div class="styled-input">
+                                <input id="datepicker" placeholder="Date of Today" name="Date" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+                                       required="">
+                            </div>*@
                         <div class="styled-input">
                             <label class="form-label">
                                 Bangla 2nd Paper
@@ -164,16 +167,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <div class="styled-input">
                             <label class="form-label">
+                                Total Marks of HSC
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="TotalHSC" name="TotalHSC" min="660" max="1299" required="" readonly>
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
                                 Total Marks of HSC And SSC
                                 <span class="form-required">*</span>
                             </label>
-                            <input type="number" id="TotalResult" name="Total_HSC_SSC" min="660" max="1299" required="">
+                            <input type="number" id="TotalHSC_SSC" name="Total_HSC_SSC" min="660" max="1299" required="" readonly>
                         </div>
-
                         <div class="clear"> </div>
                     </div>
                 </div>
-                <input type="submit" value="Submit">
+                <input onclick="myFunction()" type="submit" value="Submit">
             </form>
         </div>
     </div>
@@ -192,7 +201,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- Calendar -->
     <link rel="stylesheet" href="~/Theme/ApplyTest/Business/css/jquery-ui.css" />
     <script src="~/Theme/ApplyTest/Business/js/jquery-ui.js"></script>
-    
 
 
     <script>
@@ -200,10 +208,82 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             $("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
         });
 
+
+
+
+
+    </script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+
+        $("#marketing2nd").keyup(function () {
+            debugger
+            var bangla1st = $("#bangla1st").val();
+            var English1st = $("#English1st").val();
+            var accounting1st = $("#accounting1st").val();
+            var finaance1st = $("#finaance1st").val();
+            var managment1st = $("#managment1st").val();
+            var marketing1st = $("#marketing1st").val();
+            var ict = $("#ict").val();
+            var bangla2nd = $("#bangla2nd").val();
+            var English2nd = $("#English2nd").val();
+            var accounting2nd = $("#accounting2nd").val();
+            var finaance2nd = $("#finaance2nd").val();
+            var managment2nd = $("#managment2nd").val();
+            var marketing2nd = $("#marketing2nd").val();
+            var TotalHSC = $("#TotalHSC").val();
+            var totalssc = $("#totalssc").val();
+
+            // var TotalHSC = parseInt(bangla1st) + parseInt(English1st) + parseInt(accounting1st) + parseInt(finaance1st) + parseInt(managment1st) + parseInt(marketing1st) + parseInt(ict) + parseInt(bangla2nd) + parseInt(English2nd) + parseInt(Accounting2nd) + parseInt(Finaance2nd) + parseInt(Managment2nd) + parseInt(marketing2nd);
+            var TotalHSC = parseInt(bangla1st) + parseInt(English1st) + parseInt(accounting1st) + parseInt(finaance1st) + parseInt(managment1st) + parseInt(marketing1st) + parseInt(ict) + parseInt(bangla2nd) + parseInt(English2nd) + parseInt(accounting2nd) + parseInt(finaance2nd) + parseInt(managment2nd) + parseInt(marketing2nd);
+
+            $("#TotalHSC").val(TotalHSC);
+            var TotalHSC_SSC = parseInt(totalssc) + parseInt(TotalHSC);
+            $("#TotalHSC_SSC").val(TotalHSC_SSC);
+        });
+
+        //$window.onload(function () {
+        //    if (TotalHSC_SSC < 2000)
+        //        alert("Your best place for the next institaion");
+        //});
+
+
+    </script>
+    <script>
+
+      function myFunction() {
+          var TotalMarks= $("#TotalHSC_SSC").val();
+          
+          if (TotalMarks > 2150 && TotalMarks < 2450) {
+             alert("Dear student, we will suggest that if continue your best study so you will be given next institution is Dhaka University");
+          }
+          else if (TotalMarks >1600  && TotalMarks < 1800) {
+            alert("Good day");
+          }
+          else if (TotalMarks > 1600 && TotalMarks < 1800) {
+              alert("Good day");
+          }
+          else if (TotalMarks > 1600 && TotalMarks < 1800) {
+              alert("Good day");
+          }
+              else if (TotalMarks > 1600 && TotalMarks < 1800) {
+              alert("Good day");
+          }
+              else if (TotalMarks > 1600 && TotalMarks < 1800) {
+              alert("Good day");
+          }
+          else {
+              alert("Good Night");
+          }
+
+       }
     </script>
 
-    <!-- //Calendar -->
+</body >
 
-</body>
 
-</html>
+</html >
+
+
+

@@ -1,23 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
+using System.IO;
+using System.Web.Security;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Security;
+using WebApplication_04.Security;
 using AutoMapper;
 using WebApplication_04.BLL.BLL;
 using WebApplication_04.Model.Model;
 using WebApplication_04.Models;
 using WebApplication_04.DatabaseContext.DatabaseContext;
+using System.Net.Mail;
+using System.Threading.Tasks;
 
 namespace WebApplication_04.Controllers
 {
     public class StudentController : Controller
     {
-       
+
+        ContactManager _contactManager = new ContactManager();
         StudentManager _studentManager = new StudentManager();
         MajorOfSceienceManager _majorOfSceienceManager = new MajorOfSceienceManager();
         MajorOfBusinessManager _majorOfBusinessManager = new MajorOfBusinessManager();
+        MajorOfHumanitiesManager _majorOfHumanitiesManager = new MajorOfHumanitiesManager();
         ProjectDbContext _dbContext = new ProjectDbContext();
 
 
@@ -26,10 +34,11 @@ namespace WebApplication_04.Controllers
             return View();
         }
         // GET: Unique Data Check
-        public ActionResult CheckExist(string email, int? Id)
+        [HttpPost]
+        public ActionResult CheckExist(string email)
         {
             var validateName = _dbContext.Students.FirstOrDefault
-                                (x => x.Email == email && x.Id != Id);
+                                (x => x.Email == email );
             if (validateName != null)
             {
                 return Json(false, JsonRequestBehavior.AllowGet);
@@ -41,8 +50,8 @@ namespace WebApplication_04.Controllers
         }
 
         // GET: Student
-        [HttpGet]
-        public ActionResult Add()
+       [HttpGet]
+        public ActionResult ApplyAdmission()
         {
             StudentViewModel studentViewModel = new StudentViewModel();
             studentViewModel.Students = _studentManager.ViewStudent();
@@ -52,7 +61,7 @@ namespace WebApplication_04.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(StudentViewModel studentViewModel)
+        public ActionResult ApplyAdmission(StudentViewModel studentViewModel)
         {
             string message = "";
             if (ModelState.IsValid)
@@ -61,33 +70,105 @@ namespace WebApplication_04.Controllers
 
                 if (_studentManager.Add(student))
                 {
-                    message = "Successfully Registration ";
+                    message = "Done Successfully  ";
                 }
                 else
                 {
-                    message = " Not Registration";
+                    message = "The email or cell number is already Exist";
                 }
             }
             else
             {
-                message = "Registration  Failed";
+                message = "Successfully  Failed";
             }
             ViewBag.Message = message;
             studentViewModel.Students = _studentManager.ViewStudent();
-            return RedirectToAction("Index", "Student");
+            return View(studentViewModel);
         }
+
+        // GET: ERP/Login // for admin	
+     [HttpGet]
         public ActionResult Login()
         {
-            if (Request.Cookies.Get("student") != null)
+
+
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(Login login)
+        {
+            if (ModelState.IsValid)
             {
-                return View();
+                if (_dbContext.Students.Where(X => X.Email == login.Email && X.Password == login.Password).FirstOrDefault() == null)
+                {
+                    ModelState.AddModelError("Error", "Email or Password is not Match");
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    Session["Email"] = login.Email;
+                    return RedirectToAction("Index", "Student");
+                }
+            }
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            //var user = _dbContext.Students.Where(X => X.Email == login.Email && X.Password == login.Password).Count();
+            //if (user > 0)
+            //{
+            //    return RedirectToAction("Index", "Student");
+            //}
+            //else
+            //{
+
+            //    return RedirectToAction("Index", "Home");
+            //}
+
+
+        }
+
+
+        [HttpGet]
+        public ActionResult UpdateProfile(string Email)
+        {
+
+            var student = _studentManager.GetById(Email);
+
+            StudentViewModel studentViewModel = Mapper.Map<StudentViewModel>(student);
+
+            studentViewModel.Students = _studentManager.GetAll();
+
+            return View(studentViewModel);
+        }
+        [HttpPost]
+        public ActionResult UpdateProfile(StudentViewModel studentViewModel)
+        {
+            string message = "";
+
+
+            if (ModelState.IsValid)
+            {
+                Student student = Mapper.Map<Student>(studentViewModel);
+
+                if (_studentManager.Update(student))
+                {
+                    message = "Updated";
+                }
+                else
+                {
+                    message = "Not Updated";
+                }
             }
             else
             {
-                return RedirectToAction("Index", "Student");
+                message = "ModelState Failed";
             }
 
+            ViewBag.Message = message;
+            studentViewModel.Students = _studentManager.GetAll();
 
+            return View(studentViewModel);
         }
         public ActionResult Logout()
         {
@@ -192,5 +273,110 @@ namespace WebApplication_04.Controllers
             // return RedirectToAction("Index", "Student");
             return View();
         }
+
+        [HttpGet]
+        public ActionResult MajorOfHuminties()
+        {
+
+            HumantiesViewModel _humantiesViewModel = new HumantiesViewModel();
+            _humantiesViewModel.MajorOfHumanities = _majorOfHumanitiesManager.GetAll();
+           
+            return View(_humantiesViewModel);
+        }
+        [HttpPost]
+        public ActionResult MajorOfHuminties(HumantiesViewModel humantiesViewModel)
+        {
+
+            string message = "";
+
+            if (ModelState.IsValid)
+            {
+               MajorOfHumanities Humanties = Mapper.Map<MajorOfHumanities>(humantiesViewModel);
+
+
+                if (_majorOfHumanitiesManager.Add(Humanties))
+                {
+                    message = "Successfully Application ";
+                }
+                else
+                {
+                    message = " Not Application";
+                }
+            }
+            else
+            {
+                message = "Application  Failed";
+            }
+            ViewBag.Message = message;
+            humantiesViewModel.MajorOfHumanities = _majorOfHumanitiesManager.GetAll();
+            // return RedirectToAction("Index", "Student");
+            return View();
+        }
+
+        public ActionResult ViewProfile()
+        { 
+            ModelState.Clear();
+            return View(_studentManager.GetAll());
+        }
+
+
+        public ActionResult Map()
+        {
+
+            return View();
+        }
+
+        public JsonResult IsMailExist(string email)
+        {
+            bool isExists = false;
+            var emailtList = _studentManager.GetAll().Where(c => c.Email == email);
+
+
+            if (emailtList.Count() > 0)
+            {
+                isExists = true;
+            }
+
+            return Json(isExists, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet]
+        public ActionResult Contact()
+        {
+            ContactViewModel _contactViewModel = new ContactViewModel();
+            _contactViewModel.Contacts = _contactManager.ViewContact();
+
+
+            return View(_contactViewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Contact(ContactViewModel contactViewModel)
+        {
+            string message = "";
+            if (ModelState.IsValid)
+            {
+                Contact contact = Mapper.Map<Contact>(contactViewModel);
+
+                if (_contactManager.Contact(contact))
+                {
+                    message = "Successfully Send The Massage";
+                }
+                else
+                {
+                    message = "Not Sent Please try Again";
+                }
+            }
+            else
+            {
+                message = "Massage is Failed";
+            }
+            ViewBag.Message = message;
+            contactViewModel.Contacts = _contactManager.ViewContact();
+            return View(contactViewModel);
+        }
+
+       
+
     }
 }

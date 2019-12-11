@@ -49,33 +49,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContext\ProjectDbContext.cs" />
-    <Compile Include="Migrations\201912030601008_InitialCreate.cs" />
-    <Compile Include="Migrations\201912030601008_InitialCreate.Designer.cs">
-      <DependentUpon>201912030601008_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201912100621145_InitialCreate.cs" />
+    <Compile Include="Migrations\201912100621145_InitialCreate.Designer.cs">
+      <DependentUpon>201912100621145_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912030759041_Date.cs" />
-    <Compile Include="Migrations\201912030759041_Date.Designer.cs">
-      <DependentUpon>201912030759041_Date.cs</DependentUpon>
+    <Compile Include="Migrations\201912100629286_ad.cs" />
+    <Compile Include="Migrations\201912100629286_ad.Designer.cs">
+      <DependentUpon>201912100629286_ad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912031822388_Students.cs" />
-    <Compile Include="Migrations\201912031822388_Students.Designer.cs">
-      <DependentUpon>201912031822388_Students.cs</DependentUpon>
+    <Compile Include="Migrations\201912100631166_a.cs" />
+    <Compile Include="Migrations\201912100631166_a.Designer.cs">
+      <DependentUpon>201912100631166_a.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912031848027_Studentcul.cs" />
-    <Compile Include="Migrations\201912031848027_Studentcul.Designer.cs">
-      <DependentUpon>201912031848027_Studentcul.cs</DependentUpon>
+    <Compile Include="Migrations\201912110531243_tomal.cs" />
+    <Compile Include="Migrations\201912110531243_tomal.Designer.cs">
+      <DependentUpon>201912110531243_tomal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912032158433_Stu.cs" />
-    <Compile Include="Migrations\201912032158433_Stu.Designer.cs">
-      <DependentUpon>201912032158433_Stu.cs</DependentUpon>
+    <Compile Include="Migrations\201912110546354_tom.cs" />
+    <Compile Include="Migrations\201912110546354_tom.Designer.cs">
+      <DependentUpon>201912110546354_tom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912050830581_Date1.cs" />
-    <Compile Include="Migrations\201912050830581_Date1.Designer.cs">
-      <DependentUpon>201912050830581_Date1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912050927242_Da.cs" />
-    <Compile Include="Migrations\201912050927242_Da.Designer.cs">
-      <DependentUpon>201912050927242_Da.cs</DependentUpon>
+    <Compile Include="Migrations\201912110559010_to.cs" />
+    <Compile Include="Migrations\201912110559010_to.Designer.cs">
+      <DependentUpon>201912110559010_to.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,26 +87,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912030601008_InitialCreate.resx">
-      <DependentUpon>201912030601008_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912100621145_InitialCreate.resx">
+      <DependentUpon>201912100621145_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912030759041_Date.resx">
-      <DependentUpon>201912030759041_Date.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912100629286_ad.resx">
+      <DependentUpon>201912100629286_ad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912031822388_Students.resx">
-      <DependentUpon>201912031822388_Students.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912100631166_a.resx">
+      <DependentUpon>201912100631166_a.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912031848027_Studentcul.resx">
-      <DependentUpon>201912031848027_Studentcul.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912110531243_tomal.resx">
+      <DependentUpon>201912110531243_tomal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912032158433_Stu.resx">
-      <DependentUpon>201912032158433_Stu.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912110546354_tom.resx">
+      <DependentUpon>201912110546354_tom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912050830581_Date1.resx">
-      <DependentUpon>201912050830581_Date1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912050927242_Da.resx">
-      <DependentUpon>201912050927242_Da.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912110559010_to.resx">
+      <DependentUpon>201912110559010_to.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

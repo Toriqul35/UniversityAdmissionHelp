@@ -1,0 +1,255 @@
+﻿<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>major of humanities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Education Admission Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="~/Theme/ApplyTest/Business/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <link rel="stylesheet" href="~/Theme/ApplyTest/Business/css/font-awesome.css">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+    <!-- //web font -->
+</head>
+
+<body>
+
+    <!-- main -->
+    <div class="main-agileits">
+        @{
+            Html.RenderPartial("~/Views/Shared/Student/_StudentHome.cshtml");
+        }
+
+        <div class="register-form" style="width:990px; margin-left:300px; margin-top:-120px;">
+            <h1>
+                Faculty Of Humanities
+                @*<img src="~/Theme/ApplyTest/Business/images/logo.png" alt="">*@
+            </h1>
+            <form action="@Url.Action("MajorOfHuminties","Student")" method="post">
+
+                <div style="width:420px">
+                    <div class="fields-grid">
+                        <h3>
+                            <b style="color:red">Subject Marks of HSC Humanities</b>
+
+                        </h3>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Total SSC Number
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="totalssc" name="TotalSSC" min="720" max="1199" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Bangla 1st Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="bangla1st" name="Bangla1st" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                English 1st Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="English1st" name="Engish1st" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Accounting 1st Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="accounting1st" name="Economics1st" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Sociology 1st Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="finaance1st" name="Sociology1st" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Geography 1st Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="managment1st" name="Geography1st" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                IslamicHistory 1st Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="marketing1st" name="IslamicHistory1st" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                ICT
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="ict" name="ICT" min="60" max="99" required="">
+                        </div>
+
+
+                        <div class="clear"> </div>
+                    </div>
+                </div>
+                <div style="width:430px; margin-left:490px; margin-top:-630px;">
+                    <div class="fields-grid">
+
+                        <h3>
+                            <b style="color:red">Subject Marks of HSC Humanities</b>
+                        </h3>
+                        <div class="styled-input">
+                            <input id="datepicker" placeholder="Date of Today" name="Date" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+                                   required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Bangla 2nd Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="bangla2nd" name="Bangla2nd" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                English 2nd Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="English2nd" name="English2nd" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Economics 2nd Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="accounting2nd" name="Economics2nd" min="60" max="99" required="">
+                        </div>
+
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Sociology 2nd Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="finaance2nd" name="Sociology2nd" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Geography 2nd Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="managment2nd" name="Geography2nd" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                IslamicHistory 2nd Paper
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="marketing2nd" name="IslamicHistory2nd" min="60" max="99" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Total Marks of HSC
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="TotalHSC" name="TotalHSC" min="660" max="1299" required="">
+                        </div>
+                        <div class="styled-input">
+                            <label class="form-label">
+                                Total Marks of HSC And SSC
+                                <span class="form-required">*</span>
+                            </label>
+                            <input type="number" id="TotalHSC_SSC" name="Total_HSC_SSC" min="660" max="1299" required="">
+                        </div>
+
+                        <div class="clear"> </div>
+                    </div>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <!-- //main -->
+    <!-- copyright -->
+    <div class="w3copyright-agile">
+        <h2>
+            © 2019 All rights reserved | Design by Md Toriqul Islam
+
+        </h2>
+    </div>
+    <!-- //copyright -->
+    <!-- js -->
+    <script src="~/Theme/ApplyTest/Business/js/jquery-2.1.4.min.js"></script>
+
+    <!-- Calendar -->
+    <link rel="stylesheet" href="~/Theme/ApplyTest/Business/css/jquery-ui.css" />
+    <script src="~/Theme/ApplyTest/Business/js/jquery-ui.js"></script>
+
+
+
+    <script>
+        $(function () {
+            $("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+        });
+
+    </script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+
+        $("#marketing2nd").keyup(function () {
+            debugger
+            var bangla1st = $("#bangla1st").val();
+            var English1st = $("#English1st").val();
+            var accounting1st = $("#accounting1st").val();
+            var finaance1st = $("#finaance1st").val();
+            var managment1st = $("#managment1st").val();
+            var marketing1st = $("#marketing1st").val();
+            var ict = $("#ict").val();
+            var bangla2nd = $("#bangla2nd").val();
+            var English2nd = $("#English2nd").val();
+            var accounting2nd = $("#accounting2nd").val();
+            var finaance2nd = $("#finaance2nd").val();
+            var managment2nd = $("#managment2nd").val();
+            var marketing2nd = $("#marketing2nd").val();
+            var TotalHSC = $("#TotalHSC").val();
+            var totalssc = $("#totalssc").val();
+
+          
+            var TotalHSC = parseInt(bangla1st) + parseInt(English1st) + parseInt(accounting1st) + parseInt(finaance1st) + parseInt(managment1st) + parseInt(marketing1st) + parseInt(ict) + parseInt(bangla2nd) + parseInt(English2nd) + parseInt(accounting2nd) + parseInt(finaance2nd) + parseInt(managment2nd) + parseInt(marketing2nd);
+
+            $("#TotalHSC").val(TotalHSC);
+            var TotalHSC_SSC = parseInt(totalssc) + parseInt(TotalHSC);
+            $("#TotalHSC_SSC").val(TotalHSC_SSC);
+        });
+
+        $("#submit").click(function () {
+            if (TotalHSC_SSC < 2000)
+                alert("Your best place for the next institaion");
+        });
+
+    </script>
+</body >
+
+</html >
