@@ -408,6 +408,7 @@
     <Folder Include="App_Data\File\" />
     <Folder Include="Contents\Admin\" />
     <Folder Include="Contents\Image\" />
+    <Folder Include="File\" />
     <Folder Include="Notice\" />
   </ItemGroup>
   <ItemGroup>
