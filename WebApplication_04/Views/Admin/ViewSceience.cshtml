@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebApplication_04.Model.Model.MajorOfScience>
+
+
+<link href="~/Contents/CSS/Admin/MajorBusiness.css" rel="stylesheet" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<meta name="viewport" content="width=device-width" />
+<title>Add</title>
+
+
+<from class="so">
+    <table>
+
+        <tr>
+            <th>Sl</th>
+            <th>Total SSC</th>
+            <th>Bangla1st</th>
+            <th>Bangla2nd</th>
+            <th>English1st</th>
+            <th>English2nd</th>
+            <th>Ict</th>
+            <th>Physics1st</th>
+            <th>Physics2nd</th>
+            <th>Chemistry1st</th>
+            <th>Chemistry2nd</th>
+            <th>Baiology1st</th>
+            <th>Baiology2nd</th>
+            <th>Math1st</th>
+            <th>Math2nd</th>
+            <th> <a href="~/Admin/Index"> Home</a></th>
+        </tr>
+        @{ int i = 1;}
+        @foreach (var purchase in Model)
+        {
+            <tr>
+                <td>@(i++)</td>
+                <td>@purchase.TotalSSC</td>
+                <td>@purchase.Bangla1st</td>
+                <td>@purchase.Bangla2nd</td>
+                <td>@purchase.Engish1st</td>
+                <td>@purchase.English2nd</td>
+                <td>@purchase.Ict</td>
+                <td>@purchase.Physics1st</td>
+                <td>@purchase.Physics2nd</td>
+                <td>@purchase.Chemistry1st</td>
+                <td>@purchase.Chemistry2nd</td>
+                <td>@purchase.Baiology1st</td>
+                <td>@purchase.Baiology2nd</td>
+                <td>@purchase.HigherMath1st</td>
+                <td>@purchase.HigherMath2nd</td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteSceience", "Admin", new { Id = purchase.Id }, null)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</from>
+
+
+<script src="~/Scripts/jquery-1.8.0.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+

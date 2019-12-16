@@ -20,7 +20,7 @@ namespace WebApplication_04.Controllers
 {
     public class StudentController : Controller
     {
-
+        AdminManager _adminManager = new AdminManager();
         ContactManager _contactManager = new ContactManager();
         StudentManager _studentManager = new StudentManager();
         MajorOfSceienceManager _majorOfSceienceManager = new MajorOfSceienceManager();
@@ -55,7 +55,6 @@ namespace WebApplication_04.Controllers
         {
             StudentViewModel studentViewModel = new StudentViewModel();
             studentViewModel.Students = _studentManager.ViewStudent();
-
 
             return View(studentViewModel);
         }
@@ -318,7 +317,18 @@ namespace WebApplication_04.Controllers
             ModelState.Clear();
             return View(_studentManager.GetAll());
         }
+        [HttpGet]
+        public ActionResult SearchProfile(string searching)
+        {
+            var Post = from s in _dbContext.Students
+                       select s;
+            if (!String.IsNullOrEmpty(searching))
+            {
+                Post = Post.Where(s => s.City.Contains(searching) || s.City.Contains(searching) || s.Zipcode.Contains(searching) || s.Year.Contains(searching) || s.Gender.Contains(searching));
+            }
 
+            return View(Post.ToList());
+        }
 
         public ActionResult Map()
         {
@@ -338,42 +348,6 @@ namespace WebApplication_04.Controllers
             }
 
             return Json(isExists, JsonRequestBehavior.AllowGet);
-        }
-
-        [HttpGet]
-        public ActionResult Contact()
-        {
-            ContactViewModel _contactViewModel = new ContactViewModel();
-            _contactViewModel.Contacts = _contactManager.ViewContact();
-
-
-            return View(_contactViewModel);
-        }
-
-        [HttpPost]
-        public ActionResult Contact(ContactViewModel contactViewModel)
-        {
-            string message = "";
-            if (ModelState.IsValid)
-            {
-                Contact contact = Mapper.Map<Contact>(contactViewModel);
-
-                if (_contactManager.Contact(contact))
-                {
-                    message = "Successfully Send The Massage";
-                }
-                else
-                {
-                    message = "Not Sent Please try Again";
-                }
-            }
-            else
-            {
-                message = "Massage is Failed";
-            }
-            ViewBag.Message = message;
-            contactViewModel.Contacts = _contactManager.ViewContact();
-            return View(contactViewModel);
         }
 
        

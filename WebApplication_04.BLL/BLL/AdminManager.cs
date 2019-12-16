@@ -21,9 +21,48 @@ namespace WebApplication_04.BLL.BLL
             return _admin.PostAdmission(postAdmission);
         }
 
-        public List<PostAdmission> ViewPost()
+        public List<PostAdmission> GetAll()
         {
-            return _admin.ViewPost();
+            return _admin.GetAll();
         }
+        public List<MajorOfBusiness> ViewBuisness()
+        {
+            return _admin.ViewBuisness();
+        }
+        public bool DeleteBusiness(int id)
+        {
+            return _admin.DeleteBusiness(id);
+        }
+        public List<MajorOfHumanities> ViewHumanities()
+        {
+            return _admin.ViewHumanities();
+        }
+        public bool DeleteHumanites(int id)
+        {
+            return _admin.DeleteHumanites(id);
+        }
+        public List<MajorOfScience> ViewSceience()
+        {
+            return _admin.ViewSceience();
+        }
+        public bool DeleteSecience(int id)
+        {
+            return _admin.DeleteSceience(id);
+        }
+        public bool DeletePost(int id)
+        {
+            return _admin.DeletePost(id);
+        }
+
+        public bool UpdatePost(PostAdmission postAdmission)
+        {
+            return _admin.UpdatePost(postAdmission);
+        }
+
+        public PostAdmission GetByIdPost(int id)
+        {
+            return _admin.GetByIdPost(id);
+        }
+
     }
 }

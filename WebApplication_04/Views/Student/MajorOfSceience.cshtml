@@ -13,113 +13,169 @@
 @{
     Html.RenderPartial("~/Views/Shared/Student/_StudentHome.cshtml");
 }
-    <form method="post">
-        <h1 style="margin-left:400px;"> Faculty Of Science </h1>
-        <table>
-            
-            <tr>
-                <td>@Html.LabelFor(c => c.TotalSSC)</td>
-                <td> @Html.EditorFor(model => model.TotalSSC, new { @id = "TotalSSC", @placeholder = "SSC Total Marks" })</td>
-                <td>@Html.ValidationMessageFor(c => c.TotalSSC)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.Bangla1st)</td>
-                <td> @Html.EditorFor(model => model.Bangla1st, new { @id = "Bangla1st", @placeholder = "Bangla 1st Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Bangla1st)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.Bangla2nd)</td>
-                <td> @Html.EditorFor(model => model.Bangla2nd, new { @id = "Bangla2nd", @placeholder = "Bangla 2nd Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Bangla2nd)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.Engish1st)</td>
-                <td> @Html.EditorFor(model => model.Engish1st, new { @id = "Engish1st", @placeholder = "English 1st Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Engish1st)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.English2nd)</td>
-                <td> @Html.EditorFor(model => model.English2nd, new { @id = "TotalSSC", @placeholder = "English 2nd Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.English2nd)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.Ict)</td>
-                <td> @Html.EditorFor(model => model.Ict, new { @id = "Ict", @placeholder = "Ict " })</td>
-                <td>@Html.ValidationMessageFor(c => c.Ict)</td>
-            </tr>
+<form method="post">
+    <h1 style="margin-left:400px;"> Faculty Of Science </h1>
+    <table>
 
-            <tr>
-                <td>@Html.LabelFor(c => c.Physics1st)</td>
-                <td> @Html.EditorFor(model => model.Physics1st, new { @id = "Physics1st", @placeholder = "Physics 1st Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Physics1st)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.Physics2nd)</td>
-                <td> @Html.EditorFor(model => model.Physics2nd, new { @id = "Physics2nd", @placeholder = "Physics 2nd Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Physics2nd)</td>
-            </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.TotalSSC)</td>
+            <td> @Html.EditorFor(model => model.TotalSSC, new { @id = "TotalSSC", @placeholder = "SSC Total Marks" })</td>
+            <td>@Html.ValidationMessageFor(c => c.TotalSSC)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Bangla1st)</td>
+            <td> @Html.EditorFor(model => model.Bangla1st, new { @id = "Bangla1st", @placeholder = "Bangla 1st Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Bangla1st)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Bangla2nd)</td>
+            <td> @Html.EditorFor(model => model.Bangla2nd, new { @id = "Bangla2nd", @placeholder = "Bangla 2nd Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Bangla2nd)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Engish1st)</td>
+            <td> @Html.EditorFor(model => model.Engish1st, new { @id = "English1st", @placeholder = "English 1st Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Engish1st)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.English2nd)</td>
+            <td> @Html.EditorFor(model => model.English2nd, new { @id = "English2nd", @placeholder = "English 2nd Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.English2nd)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Ict)</td>
+            <td> @Html.EditorFor(model => model.Ict, new { @id = "Ict", @placeholder = "Ict " })</td>
+            <td>@Html.ValidationMessageFor(c => c.Ict)</td>
+        </tr>
 
-            <tr>
-                <td>@Html.LabelFor(c => c.Chemistry1st)</td>
-                <td> @Html.EditorFor(model => model.Chemistry1st, new { @id = "Chemistry1st", @placeholder = "Chemistry 1st Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Chemistry1st)</td>
-            <tr>
-                <td>@Html.LabelFor(c => c.Chemistry2nd)</td>
-                <td> @Html.EditorFor(model => model.Chemistry2nd, new { @id = "Chemistry2nd", @placeholder = "Chemistry 2nd Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Chemistry2nd)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.Baiology1st)</td>
-                <td> @Html.EditorFor(model => model.Baiology1st, new { @id = "Baiology1st", @placeholder = "Baiology 1st Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Baiology1st)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.Baiology2nd)</td>
-                <td> @Html.EditorFor(model => model.Baiology2nd, new { @id = "Baiology2nd", @placeholder = "Baiology 2nd Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Baiology2nd)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.HigherMath1st)</td>
-                <td> @Html.EditorFor(model => model.HigherMath1st, new { @id = "HigherMath1st", @placeholder = "HigherMath 1st Paper " })</td>
-                <td>@Html.ValidationMessageFor(c => c.HigherMath1st)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.HigherMath2nd)</td>
-                <td> @Html.EditorFor(model => model.HigherMath2nd, new { @id = "HigherMath2nd", @placeholder = "HigherMath 2nd Paper" })</td>
-                <td>@Html.ValidationMessageFor(c => c.HigherMath2nd)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.TotalHSC)</td>
-                <td> @Html.EditorFor(model => model.TotalHSC, new { @id = "TotalHSC" })</td>
-                <td>@Html.ValidationMessageFor(c => c.TotalHSC)</td>
-            </tr>
-            <tr>
-                <td>@Html.LabelFor(c => c.Total_HSC_SSC)</td>
-                <td> @Html.EditorFor(model => model.Total_HSC_SSC, new { @id = "Total_HSC_SSC" })</td>
-                <td>@Html.ValidationMessageFor(c => c.Total_HSC_SSC)</td>
-            </tr>
-            <tr>
-                <td>Action</td>
-                <td><input class='btn btn-info btn-xs' type="submit" value="Submit"/></td>
-                <td></td>
-                <td>
-                    @if (ViewBag.Message != null)
-                    {
-                        <h3>
-                            <b>
-                                @ViewBag.Message
-                            </b>
-                        </h3>
-                    }
-                </td>
-            </tr>
-        </table>
-        <input class='btn btn-info btn-xs' type="submit" value="Submit" />
-    </form>
+        <tr>
+            <td>@Html.LabelFor(c => c.Physics1st)</td>
+            <td> @Html.EditorFor(model => model.Physics1st, new { @id = "Physics1st", @placeholder = "Physics 1st Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Physics1st)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Physics2nd)</td>
+            <td> @Html.EditorFor(model => model.Physics2nd, new { @id = "Physics2nd", @placeholder = "Physics 2nd Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Physics2nd)</td>
+        </tr>
+
+        <tr>
+            <td>@Html.LabelFor(c => c.Chemistry1st)</td>
+            <td> @Html.EditorFor(model => model.Chemistry1st, new { @id = "Chemistry1st", @placeholder = "Chemistry 1st Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Chemistry1st)</td>
+        <tr>
+            <td>@Html.LabelFor(c => c.Chemistry2nd)</td>
+            <td> @Html.EditorFor(model => model.Chemistry2nd, new { @id = "Chemistry2nd", @placeholder = "Chemistry 2nd Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Chemistry2nd)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Baiology1st)</td>
+            <td> @Html.EditorFor(model => model.Baiology1st, new { @id = "Baiology1st", @placeholder = "Baiology 1st Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Baiology1st)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Baiology2nd)</td>
+            <td> @Html.EditorFor(model => model.Baiology2nd, new { @id = "Baiology2nd", @placeholder = "Baiology 2nd Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Baiology2nd)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.HigherMath1st)</td>
+            <td> @Html.EditorFor(model => model.HigherMath1st, new { @id = "HigherMath1st", @placeholder = "HigherMath 1st Paper " })</td>
+            <td>@Html.ValidationMessageFor(c => c.HigherMath1st)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.HigherMath2nd)</td>
+            <td> @Html.EditorFor(model => model.HigherMath2nd, new { @id = "HigherMath2nd", @placeholder = "HigherMath 2nd Paper" })</td>
+            <td>@Html.ValidationMessageFor(c => c.HigherMath2nd)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.TotalHSC)</td>
+            <td> @Html.EditorFor(model => model.TotalHSC, new { @id = "TotalHSC" ,@readonly="readonly"})</td>
+            <td>@Html.ValidationMessageFor(c => c.TotalHSC)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(c => c.Total_HSC_SSC)</td>
+            <td> @Html.EditorFor(model => model.Total_HSC_SSC, new { @id = "Total_HSC_SSC" ,@readonly="readonly" })</td>
+            <td>@Html.ValidationMessageFor(c => c.Total_HSC_SSC)</td>
+        </tr>
+        <tr>
+            <td>Action</td>
+            <td><input onclick="myFunction()" class='btn btn-info btn-xs' type="submit" value="Submit" /></td>
+            <td></td>
+            <td>
+                @if (ViewBag.Message != null)
+                {
+                    <h3>
+                        <b>
+                            @ViewBag.Message
+                        </b>
+                    </h3>
+                }
+            </td>
+        </tr>
+    </table>
+    <input class='btn btn-info btn-xs' type="submit" value="Submit" />
+</form>
 <script src="~/Scripts/jquery-1.8.0.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script>
 
+    $("#HigherMath2nd").keyup(function () {
+        debugger
+        var Bangla1st = $("#Bangla1st").val();
+        var Bangla2nd = $("#Bangla2nd").val();
+        var English1st = $("#Engish1st").val();
+        var English2nd = $("#English2nd").val();
+        var Ict = $("#Ict").val();
+        var Physics1st = $("#Physics1st").val();
+        var Physics2nd = $("#Physics2nd").val();
+        var Chemistry1st = $("#Chemistry1st").val();
+        var Chemistry2nd = $("#Chemistry2nd").val();
+        var Baiology1st = $("#Baiology1st").val();
+        var Baiology2nd = $("#Baiology2nd").val();
+        var HigherMath1st = $("#HigherMath1st").val();
+        var HigherMath2nd = $("#HigherMath2nd").val();
+        var TotalHSC = $("#TotalHSC").val();
+        var TotalSSC = $("#TotalSSC").val();
+
+        //var TotalHSC = parseInt(Bangla1st) + parseInt(Bangla2nd) + parseInt(Engish1st) + parseInt(Engish2nd) + parseInt(Ict) + parseInt(Chemistry1st) + parseInt(Chemistry2nd) + parseInt(Physics1st) + parseInt(Physics2nd) + parseInt(Baiology1st) + parseInt(Baiology2nd) + parseInt(HigherMath1st) + parseInt(HigherMath2nd);
+        var TotalHSC = parseInt(Bangla1st) + parseInt(Bangla2nd) + parseInt(English1st) + parseInt(English2nd) + parseInt(Ict) + parseInt(Chemistry1st) + parseInt(Chemistry2nd) + parseInt(Physics1st) + parseInt(Physics2nd) + parseInt(Baiology1st) + parseInt(Baiology2nd) + parseInt(HigherMath1st) + parseInt(HigherMath2nd);
+        $("#TotalHSC").val(TotalHSC);
+        var Total_HSC_SSC = parseInt(TotalSSC) + parseInt(TotalHSC);
+        $("#Total_HSC_SSC").val(Total_HSC_SSC);
+    });
+</script>
+<script>
+    function myFunction() {
+        var TotalMarks = $("#TotalHSC_SSC").val();
+
+        if (TotalMarks > 2250 && TotalMarks < 2490) {
+            alert("Dear student, we will suggest that if continue your best study so you will be given next institution is BUET");
+        }
+           else if (TotalMarks > 2100 && TotalMarks < 2250) {
+            alert("Dear student, we will suggest that if continue your best study so you will be given next institution is University of Dhaka");
+        }
+        else if (TotalMarks > 2100 && TotalMarks < 2250) {
+            alert("Dear student, we will suggest that if continue your best study so you will be given next institution is Jahangirnagar University");
+        }
+        else if (TotalMarks > 1950 && TotalMarks < 2100) {
+            alert("Dear student, we will suggest that if continue your best study so you will be given next institution is Jagannath University");
+        }
+        else if (TotalMarks > 1900 && TotalMarks < 1950) {
+            alert("Dear student, we will suggest that if continue your best study so you will be given next institution is University of Rajshahi");
+        }
+        else if (TotalMarks > 1800 && TotalMarks < 1900) {
+            alert("Dear student, we will suggest that if continue your best study so you will be given next institution is University Chittagong");
+        }
+        else if (TotalMarks > 1500 && TotalMarks < 1800) {
+            alert("Dear student, we will suggest that if continue your best study so you will be given next institution is Khulna University");
+        }
+        else {
+            alert("Dear student, we will suggest that if continue your best study so you will be given to best institution on Bangladesh,we also that you will try to your best");
+        }
+    }
+</script>
 
 
 

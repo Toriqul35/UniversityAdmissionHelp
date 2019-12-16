@@ -73,6 +73,26 @@
     <Compile Include="Migrations\201912110559010_to.Designer.cs">
       <DependentUpon>201912110559010_to.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912121918002_Post.cs" />
+    <Compile Include="Migrations\201912121918002_Post.Designer.cs">
+      <DependentUpon>201912121918002_Post.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912130458214_da.cs" />
+    <Compile Include="Migrations\201912130458214_da.Designer.cs">
+      <DependentUpon>201912130458214_da.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912131910206_Type.cs" />
+    <Compile Include="Migrations\201912131910206_Type.Designer.cs">
+      <DependentUpon>201912131910206_Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912131931333_drop.cs" />
+    <Compile Include="Migrations\201912131931333_drop.Designer.cs">
+      <DependentUpon>201912131931333_drop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912140551039_Marks.cs" />
+    <Compile Include="Migrations\201912140551039_Marks.Designer.cs">
+      <DependentUpon>201912140551039_Marks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -104,6 +124,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912110559010_to.resx">
       <DependentUpon>201912110559010_to.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912121918002_Post.resx">
+      <DependentUpon>201912121918002_Post.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912130458214_da.resx">
+      <DependentUpon>201912130458214_da.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912131910206_Type.resx">
+      <DependentUpon>201912131910206_Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912131931333_drop.resx">
+      <DependentUpon>201912131931333_drop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912140551039_Marks.resx">
+      <DependentUpon>201912140551039_Marks.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

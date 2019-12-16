@@ -29,7 +29,6 @@ namespace WebApplication_04.Model.Model
         public string Country { get; set; }
         public string Password { get; set; }
         public string TypeOfMajor { get; set; }
-
         public string State { get; set; }
     }
 }

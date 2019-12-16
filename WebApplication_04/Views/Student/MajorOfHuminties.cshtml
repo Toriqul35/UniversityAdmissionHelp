@@ -186,7 +186,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="clear"> </div>
                     </div>
                 </div>
-                <input type="submit" value="Submit">
+                <input onclick="myFunction()" type="submit" value="Submit">
             </form>
         </div>
     </div>
@@ -236,7 +236,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             var TotalHSC = $("#TotalHSC").val();
             var totalssc = $("#totalssc").val();
 
-          
             var TotalHSC = parseInt(bangla1st) + parseInt(English1st) + parseInt(accounting1st) + parseInt(finaance1st) + parseInt(managment1st) + parseInt(marketing1st) + parseInt(ict) + parseInt(bangla2nd) + parseInt(English2nd) + parseInt(accounting2nd) + parseInt(finaance2nd) + parseInt(managment2nd) + parseInt(marketing2nd);
 
             $("#TotalHSC").val(TotalHSC);
@@ -244,12 +243,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             $("#TotalHSC_SSC").val(TotalHSC_SSC);
         });
 
-        $("#submit").click(function () {
-            if (TotalHSC_SSC < 2000)
-                alert("Your best place for the next institaion");
-        });
 
     </script>
-</body >
+    <script>
+        function myFunction() {
+            var TotalMarks = $("#TotalHSC_SSC").val();
 
+            if (TotalMarks > 2250 && TotalMarks < 2490) {
+                alert("Dear student, we will suggest that if continue your best study so you will be given next institution is University of Dhaka");
+            }
+            else if (TotalMarks > 2100 && TotalMarks < 2250) {
+                alert("Dear student, we will suggest that if continue your best study so you will be given next institution is Jahangirnagar University");
+            }
+            else if (TotalMarks > 1950 && TotalMarks < 2100) {
+                alert("Dear student, we will suggest that if continue your best study so you will be given next institution is Jagannath University");
+            }
+            else if (TotalMarks > 1900 && TotalMarks < 1950) {
+                alert("Dear student, we will suggest that if continue your best study so you will be given next institution is University of Rajshahi");
+            }
+            else if (TotalMarks > 1800 && TotalMarks < 1900) {
+                alert("Dear student, we will suggest that if continue your best study so you will be given next institution is University Chittagong");
+            }
+            else if (TotalMarks > 1700 && TotalMarks < 1800) {
+                alert("Dear student, we will suggest that if continue your best study so you will be given next institution is Khulna University");
+            }
+            else {
+                alert("Dear student, we will suggest that if continue your best study so you will be given to best institution on Bangladesh,we also that you will try to your best");
+            }
+        }
+    </script>
+</body>
 </html >

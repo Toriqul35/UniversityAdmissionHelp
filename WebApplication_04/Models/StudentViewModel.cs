@@ -32,7 +32,6 @@ namespace WebApplication_04.Models
         public string State { get; set; }
         public string Password { get; set; }
         public string TypeOfMajor { get; set; }
-
         public List<Student> Students { get; set; }
     }
 }

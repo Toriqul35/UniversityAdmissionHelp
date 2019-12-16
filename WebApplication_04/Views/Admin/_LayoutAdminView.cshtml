@@ -71,12 +71,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li><a href="~/Admin/Index"><i class="fa fa-tachometer"></i> <span>Dashboard</span><div class="clearfix"></div></a></li>
 
 
-                    <li id="menu-academico"><a href="inbox.html"><i class="fa fa-envelope nav_icon"></i><span>Inbox</span><div class="clearfix"></div></a></li>
+                    <li id="menu-academico">
+                        <a href="#"><i class="fa fa-envelope nav_icon"></i><span>Inbox</span><div class="clearfix"></div></a>
+                        <ul id="menu-academico-sub">
+                            <li id="menu-academico-avaliacoes"><a href="~/Student/ViewProfile">Student List</a></li>
+                            <li id="menu-academico-avaliacoes"><a href="~/Student/ViewProfile">Student Data</a></li>
+                            @*<li id="menu-academico-avaliacoes"><a href="~/Admin/PostAdmission">Faculty of Humanities</a></li>*@
+                        </ul>
+                    </li>
                     <li><a href="~/Admin/Galary"><i class="fa fa-picture-o" aria-hidden="true"></i><span>Gallery</span><div class="clearfix"></div></a></li>
                     <li id="menu-academico">
                         <a href="#"><i class="fa fa-list-ul" aria-hidden="true"></i><span>Post Admisstion</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
                         <ul id="menu-academico-sub">
-                            <li id="menu-academico-avaliacoes"><a href="icons.html">Faculty of Sceience</a></li>
+                            <li id="menu-academico-avaliacoes"><a href="~/Admin/PostAdmission">Faculty of Sceience</a></li>
                             <li id="menu-academico-avaliacoes"><a href="typography.html">Faculty of Business</a></li>
                             <li id="menu-academico-avaliacoes"><a href="faq.html">Faculty of Humanities</a></li>
                         </ul>
@@ -91,9 +98,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                         <a href="#"><i class="fa fa-check-square-o nav_icon"></i><span>View Post</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
                         <ul>
-                            <li><a href="input.html">Science</a></li>
+                            <li><a href="~/Admin/ViewAdmission">Science</a></li>
                             <li><a href="validation.html">Business</a></li>
                             <li><a href="validation.html">Humanities</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-check-square-o nav_icon"></i><span>Show Table</span> <span class="fa fa-angle-right" style="float: right"></span><div class="clearfix"></div></a>
+                        <ul>
+                            <li><a href="~/Admin/ViewBuisness">Buisness</a></li>
+                            <li><a href="~/Admin/ViewHumanites">Humanites</a></li>
+                            <li><a href="~/Admin/ViewSceience">Sceience</a></li>
                         </ul>
                     </li>
                 </ul>

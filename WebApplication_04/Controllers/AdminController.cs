@@ -15,6 +15,7 @@ namespace WebApplication_04.Controllers
 {
     public class AdminController : Controller
     {
+        StudentManager _studentManager = new StudentManager();
         ProjectDbContext _dbContext = new ProjectDbContext();
         AdminManager _adminManager = new AdminManager();
 
@@ -78,8 +79,8 @@ namespace WebApplication_04.Controllers
         [HttpGet]
         public ActionResult PostAdmission()
         {
-            PostViewModel _postViewModel = new PostViewModel();
-            _postViewModel.PostAdmissions = _adminManager.ViewPost();
+            //PostViewModel _postViewModel = new PostViewModel();
+            //_postViewModel.PostAdmissions = _adminManager.ViewPost();
             return View();
         }
 
@@ -89,6 +90,12 @@ namespace WebApplication_04.Controllers
             string message = "";
             if (ModelState.IsValid)
             {
+                //string fileName = Path.GetFileNameWithoutExtension(postViewModel.ImageFile.FileName);
+                string fileName = Path.GetFileNameWithoutExtension(postViewModel.Files.FileName);
+                postViewModel.FilePath =  fileName + System.IO.Path.GetExtension(postViewModel.Files.FileName);
+                fileName = "~/Notice/" + fileName + System.IO.Path.GetExtension(postViewModel.Files.FileName);
+                postViewModel.Files.SaveAs(Server.MapPath(fileName));
+
                 PostAdmission post = Mapper.Map<PostAdmission>(postViewModel);
 
                 if (_adminManager.PostAdmission(post))
@@ -105,8 +112,158 @@ namespace WebApplication_04.Controllers
                 message = "Successfully  Failed";
             }
             ViewBag.Message = message;
-            postViewModel.PostAdmissions = _adminManager.ViewPost();
-            return View(postViewModel);
+            //postViewModel.PostAdmissions = _adminManager.ViewPost();
+            return RedirectToAction("Index");
         }
+
+        public ActionResult ViewAdmission( PostAdmission postAdmission)
+        {
+            ModelState.Clear();
+            return View(_adminManager.GetAll());
+        }
+        public ActionResult ViewBuisness(MajorOfBusiness majorOfBusiness)
+        {
+            ModelState.Clear();
+            return View(_adminManager.ViewBuisness());
+        }
+        public ActionResult ViewHumanites(MajorOfHumanities majorOfHumanities)
+        {
+            ModelState.Clear();
+            return View(_adminManager.ViewHumanities());
+        }
+        public ActionResult ViewSceience(MajorOfScience majorOfScience)
+        {
+            ModelState.Clear();
+            return View(_adminManager.ViewSceience());
+        }
+
+        [HttpGet]
+        public FileResult DownloadFile(int id, PostAdmission obj)
+        {
+            obj = _dbContext.PostAdmissions.FirstOrDefault(c => c.Id == id);
+            
+            string filepath = Server.MapPath("~/Notice/" + obj.FilePath);
+
+            return File(filepath, "application/pdf", obj.FilePath + ".pdf");
+        }
+
+        [HttpGet]
+        public ActionResult SearchAdmission(string searching)
+        {
+            var Post = from s in _dbContext.PostAdmissions
+                           select s;
+            if (!String.IsNullOrEmpty(searching))
+            {
+                Post = Post.Where(s => s.UniversityName.Contains(searching) || s.PostType.Contains(searching));
+            }
+
+            return View(Post.ToList());
+        }
+        public ActionResult DeletePost(int id)
+        {
+            try
+            {
+                
+                if (_adminManager.DeletePost(id))
+                {
+                    ViewBag.AlertMsg = "Post Deleted Successfully";
+                }
+                return RedirectToAction("ViewAdmission");
+            }
+            catch
+            {
+                return View();
+            }
+
+        }
+        public ActionResult DeleteBusiness(int id)
+        {
+            try
+            {
+
+                if (_adminManager.DeleteBusiness(id))
+                {
+                    ViewBag.AlertMsg = "Post Deleted Successfully";
+                }
+                return RedirectToAction("ViewBuisness");
+            }
+            catch
+            {
+                return View();
+            }
+
+        }
+        public ActionResult DeleteHumanities(int id)
+        {
+            try
+            {
+
+                if (_adminManager.DeleteHumanites(id))
+                {
+                    ViewBag.AlertMsg = "Post Deleted Successfully";
+                }
+                return RedirectToAction("ViewHumanites");
+            }
+            catch
+            {
+                return View();
+            }
+
+        }
+        public ActionResult DeleteSceience(int id)
+        {
+            try
+            {
+
+                if (_adminManager.DeleteSecience(id))
+                {
+                    ViewBag.AlertMsg = "Post Deleted Successfully";
+                }
+                return RedirectToAction("ViewSceience");
+            }
+            catch
+            {
+                return View();
+            }
+
+        }
+        [HttpGet]
+        public ActionResult UpdatePost(int id)
+        {
+            var post = _adminManager.GetByIdPost(id);
+           PostViewModel postViewModel = Mapper.Map<PostViewModel>(post);
+            postViewModel.PostAdmissions = _adminManager.GetAll();
+
+            return RedirectToAction("AllCustomer");
+
+        }
+        [HttpPost]
+        public ActionResult UpdatePost(PostViewModel postViewModel)
+        {
+            string message = "";
+
+            if (ModelState.IsValid)
+            {
+               PostAdmission post = Mapper.Map<PostAdmission>(postViewModel);
+
+                if (_adminManager.UpdatePost(post))
+                {
+                    message = "Updated";
+                }
+                else
+                {
+                    message = "Not Updated";
+                }
+            }
+            else
+            {
+                message = "Update Failed";
+            }
+
+            ViewBag.Message = message;
+            postViewModel.PostAdmissions = _adminManager.GetAll();
+            return RedirectToAction("ViewAdmission");
+        }
+
     }
 }

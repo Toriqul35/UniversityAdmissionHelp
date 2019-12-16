@@ -88,7 +88,7 @@
                             <li><a href="#services" class="scroll hvr-underline-from-center">Services</a></li>
                             <li><a href="#gallery" class="scroll hvr-underline-from-center">Gallery</a></li>
                             <li><a href="#university" class="scroll hvr-underline-from-center">University</a></li>
-                            <li><a href="#team" class="scroll hvr-underline-from-center">Team</a></li>
+                            @*<li><a href="~/Student/Index" class="scroll hvr-underline-from-center">Content</a></li>*@
                             <li><a href="#contact" class=" scroll hvr-underline-from-center">Contact</a></li>
                         </ul>
                     </nav>
@@ -359,7 +359,7 @@
         </div>
         <!-- //gallery -->
         <!-- our team -->
-        <div class="team" id="team">
+        @*<div class="team" id="team">
             <div class="container">
                 <div class="w3ls-heading">
                     <h3>Our team</h3>
@@ -426,7 +426,7 @@
 
 
             </div>
-        </div>
+        </div>*@
         <!-- //our team -->
         <!-- news -->
         <section class="news" id="university">
@@ -770,11 +770,12 @@
                 </div>
                 <div class="col-md-6 w3-edu-online-form w3_mail_grids">
                     <h3>Contact Us</h3>
-                    <form action="" method="post">
+                    <form action="@Url.Action("ViewBuisness","Home")" method="post">
                         <div class="w3_agile_mail_grid">
                             <input type="text" name="UserName" placeholder="Your Name" required="">
                             <input type="email" name="Email" placeholder="Your Email" required="">
                             <input type="tel"  name="PhoneNumber" placeholder="Your Phone Number" required="">
+                            <input type="tel"  name="TotalMarks" placeholder="Total marks" required="">
                             <select id="category1" name="Typeofmajor" >
                                 <option value="">Faculty Of Sceience</option>
                                 <option value="">Faculty Of Business</option>

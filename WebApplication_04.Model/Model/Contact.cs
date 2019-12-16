@@ -13,6 +13,7 @@ namespace WebApplication_04.Model.Model
         public string  Email { get; set; }
         public string PhoneNumber { get; set; }
         public string Typeofmajor { get; set; }
+        public string TotalMarks { get; set; }
         public string Massage { get; set; }
     
 

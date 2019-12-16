@@ -9,8 +9,7 @@ namespace WebApplication_04.Model.Model
     public class AdmissionTests
     {
         public int Id { get; set; }
-        public int StudentId{get;set;}
-        public Student Student { get; set; }
+      
         public String TypeOfMajor { get; set; }
 
     }
