@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\AdminManager.cs" />
-    <Compile Include="BLL\ContactManager.cs" />
     <Compile Include="BLL\MajorOfBusinessManager.cs" />
     <Compile Include="BLL\MajorOfHumanitiesManager.cs" />
     <Compile Include="BLL\MajorOfSceienceManager.cs" />

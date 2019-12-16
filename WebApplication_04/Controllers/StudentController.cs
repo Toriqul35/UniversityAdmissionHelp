@@ -21,7 +21,6 @@ namespace WebApplication_04.Controllers
     public class StudentController : Controller
     {
         AdminManager _adminManager = new AdminManager();
-        ContactManager _contactManager = new ContactManager();
         StudentManager _studentManager = new StudentManager();
         MajorOfSceienceManager _majorOfSceienceManager = new MajorOfSceienceManager();
         MajorOfBusinessManager _majorOfBusinessManager = new MajorOfBusinessManager();

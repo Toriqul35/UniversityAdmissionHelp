@@ -18,6 +18,5 @@ namespace WebApplication_04.DatabaseContext.DatabaseContext
         public DbSet<MajorOfScience> MajorOfSciences{ set; get; }
         public DbSet<MajorOfBusiness> MajorOfBusinesses{ set; get; }
         public DbSet<MajorOfHumanities> MajorOfHumanities{ set; get; }
-        public DbSet<Contact> Contacts{ set; get; }
     }
 }

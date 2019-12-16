@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\AdmissionTests.cs" />
-    <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\LiveChat.cs" />
     <Compile Include="Model\Login.cs" />
     <Compile Include="Model\MajorOfBusiness.cs" />
